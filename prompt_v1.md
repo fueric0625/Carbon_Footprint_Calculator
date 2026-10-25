@@ -8,83 +8,81 @@ Date: 2026.10.12
 
 ## C — Context
 
-我是一名正在完成碳核算课程项目的本科生。请为一个虚拟的上海交通大学学生做个人碳足迹计算器。这个学生是全班共用的课程案例，不是对全体交大学生的统计描述。
+I am an undergraduate completing a carbon-accounting course project. Build a personal carbon footprint calculator for a fictional Shanghai Jiao Tong University student. This student is a shared course case for the whole class, not a statistical description of all SJTU students.
 
 ## O — Objective
 
-做一个可在浏览器中使用的交互式网页计算器。它需要：
+Build an interactive calculator that runs in a browser. It needs to:
 
-- 接收活动数据
-- 用 CO₂e 估算排放
-- 展示结果，并简短解释结果代表什么
-- 给出与所填活动相关的减排建议
+- Accept activity data
+- Estimate emissions in CO₂e
+- Show the result and briefly explain what it means
+- Give reduction suggestions tied to the activities entered
 
-活动数据 × 排放因子得到各类排放，再汇总成总排放。共享画像里的数字作为默认值。用户可以修改输入，用来比较不同活动水平。重置后回到李明的默认值。
+Activity data × emission factor gives each category’s emissions, which are then summed into a total. Numbers in the shared profile are the defaults. The user can change the inputs to compare different activity levels. Reset returns to Li Ming’s defaults.
 
 ## S — Style
 
-分步引导（Wizard）：采用分步向导，将问题拆解为“交通、能源、饮食、购物”等几个板块，避免一次性过多问题。
+Wizard: Use a step-by-step guide that splits the questions into sections such as transport, energy, food, and shopping, so the user is not faced with too many questions at once.
 
-仪表板（Dashboard）：计算完成后，结果会呈现在一个“仪表板”或“结果分析”页面。多图标，实时更新结果变化。
+Dashboard: After the calculation, present the results on a dashboard or results page. Use several icons, and update the results as the inputs change.
 
-视觉与交互：界面设计通常追求简洁、深色主题，以减少视觉干扰，并符合无障碍标准。加入粘性实时预览条这类设计，能让你在填写选项时，始终看到总碳排放量的实时变化，增强互动感。
+Look and interaction: Keep the interface simple, with a dark theme, to reduce visual noise and meet accessibility expectations. Add a sticky live preview bar so the running total stays visible while the user fills in the options.
 
 ## T — Tone
 
-简洁明了，理性分析结果并提出减排建议
-
-
+Clear and concise. Analyze the result rationally and offer reduction suggestions.
 
 ## A — Audience
 
-计算器的使用者和核算对象都是李明。默认输入使用下面的共享事实，不要改这些数字。画像没有给出的信息不要写成事实；如果补上，标明这是假设。
+Both the user of the calculator and the person being accounted for are Li Ming. Use the shared facts below as the default inputs. Do not change these numbers. Do not write anything the profile does not give as a fact. If you add something, label it as an assumption.
 
-### 共享事实
+### Shared facts
 
-身份：李明，20 岁，上海交通大学工科二年级。住四人宿舍，日常主要在校园，偶尔离校或回家探望家人。各类活动的时间单位不一样。
+Identity: Li Ming, age 20, a second-year engineering student at Shanghai Jiao Tong University. He lives in a four-person dorm, spends most days on campus, and occasionally leaves campus or goes home to visit family. Time units differ across activities.
 
-出行：
+Travel:
 
-- 校园内步行或骑行：约 20 km/周
-- 地铁：每周 2 次单程，每次 15 km
-- 网约车：每月 2 次单程，每次 10 km，通常独自乘坐
+- Walking or cycling on campus: about 20 km/week
+- Metro: 2 one-way trips per week, 15 km each
+- Ride-hailing: 2 one-way trips per month, 10 km each, usually alone
 
-饮食：
+Food:
 
-- 每周 21 顿正餐：牛肉或羊肉 3 顿，其他肉类 8 顿，鱼、蛋、奶或大豆 5 顿，以植物为主 5 顿
-- 大多数饭在校园食堂吃
-- 每周 2 顿外卖已经包含在这 21 顿里，不要再把外卖加成额外餐数
+- 21 main meals per week: 3 beef or lamb, 8 other meat, 5 fish, eggs, dairy, or soy, and 5 mostly plant-based
+- Most meals are eaten in the campus canteen
+- About 2 takeaway meals per week are already included in these 21 meals. Do not count takeaway as extra meals
 
-宿舍与能源：
+Dorm and energy:
 
-- 四人合住一间
-- 房间用电：最近 30 天 120 kWh，这是整间房的用电
-- 热水澡：每周 6 次，每次约 8 分钟
+- Four people share one room
+- Room electricity: 120 kWh over the last 30 days, for the whole room
+- Hot showers: 6 per week, about 8 minutes each
 
-商品与快递：
+Goods and parcels:
 
-- 网购：3 个包裹/月
-- 衣物：每教学学期 2 件
+- Online shopping: 3 parcels/month
+- Clothing: 2 items per teaching semester
 
-城际出行：
+Intercity travel:
 
-- 每教学学期乘坐高铁回家 2 次往返
-- 单程约 220 km
+- 2 round trips home by high-speed rail per teaching semester
+- About 220 km one way
 
-废弃物：
+Waste:
 
-- 一般垃圾：约 3 个小袋/周
-- 可回收瓶或罐：约 3 个/周
+- General waste: about 3 small bags/week
+- Recyclable bottles or cans: about 3 per week
 
 ## R — Response
 
-只返回一个完整的 HTML 文件，里面包含所需的 HTML、CSS 和 JavaScript。保存后能在浏览器直接打开，不要拆成多个文件，不要只给说明。
+Return only one complete HTML file containing the HTML, CSS, and JavaScript. After it is saved, it must open directly in a browser. Do not split it into multiple files, and do not return only an explanation.
 
-页面必须包含：
+The page must include:
 
-- 活动输入区。输入项旁边写明时间单位，与共享事实一致：每周、每月、最近 30 天，或每教学学期
-- 计算按钮和重置按钮。重置恢复李明的默认值
-- 总排放，并写明报告周期
-- 按活动类别分解的排放
-- 简短解释：结果怎么来的，边界包含什么、不包含什么，哪些数字是共享事实，哪些是小组假设
-- 与当前输入相关的减排建议
+- An activity input area. Next to each input, state the time unit, matching the shared facts: per week, per month, last 30 days, or per teaching semester
+- A calculate button and a reset button. Reset restores Li Ming’s defaults
+- The total emissions, with the reporting period stated
+- Emissions broken down by activity category
+- A short explanation of how the result was produced, what the boundary includes and excludes, which numbers are shared facts, and which are group assumptions
+- Reduction suggestions related to the current inputs

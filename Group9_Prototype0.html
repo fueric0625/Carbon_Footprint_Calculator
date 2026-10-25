@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>李明的个人碳足迹计算器 · Prototype 0</title>
+<title>Li Ming’s Personal Carbon Footprint · Prototype 0</title>
 <style>
   :root {
     --bg: #10151c;
@@ -25,7 +25,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font: 16px/1.5 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    font: 16px/1.5 "Segoe UI", system-ui, sans-serif;
     padding-bottom: 140px;
   }
   .wrap { max-width: 840px; margin: 0 auto; padding: 28px 20px 12px; }
@@ -83,7 +83,7 @@
   .total-line { margin: 8px 0 0; }
   .total-line strong { font-size: 40px; line-height: 1.1; }
   .chart { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
-  .chart-row { display: grid; grid-template-columns: 92px 1fr auto; gap: 10px; align-items: center; }
+  .chart-row { display: grid; grid-template-columns: 110px 1fr auto; gap: 10px; align-items: center; }
   .row-label { display: flex; align-items: center; gap: 6px; }
   .track { height: 12px; background: var(--bg); border-radius: 99px; }
   .fill { height: 100%; border-radius: 99px; }
@@ -115,170 +115,170 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>李明的个人碳足迹</h1>
-    <p>虚拟交大学生案例 · Prototype 0 · 结果按每教学学期报告</p>
-    <p class="banner">排放因子是占位值，不是共享画像中的事实。</p>
+    <h1>Li Ming’s personal carbon footprint</h1>
+    <p>A fictional SJTU student case · Prototype 0 · Reported per teaching semester</p>
+    <p class="banner">Emission factors are placeholders, not facts from the shared profile.</p>
   </header>
 
   <div id="wizard">
     <div class="card">
       <ol class="steps">
-        <li><button type="button" data-goto="0" aria-current="step">交通</button></li>
-        <li><button type="button" data-goto="1">能源</button></li>
-        <li><button type="button" data-goto="2">饮食</button></li>
-        <li><button type="button" data-goto="3">购物</button></li>
-        <li><button type="button" data-goto="4">废弃物</button></li>
+        <li><button type="button" data-goto="0" aria-current="step">Transport</button></li>
+        <li><button type="button" data-goto="1">Energy</button></li>
+        <li><button type="button" data-goto="2">Food</button></li>
+        <li><button type="button" data-goto="3">Shopping</button></li>
+        <li><button type="button" data-goto="4">Waste</button></li>
       </ol>
 
       <section class="panel" data-step="0">
-        <h2>交通</h2>
-        <p class="hint">填写李明的出行。默认值来自共享画像。</p>
+        <h2>Transport</h2>
+        <p class="hint">Enter Li Ming’s travel. Defaults come from the shared profile.</p>
         <div class="field">
-          <label for="walk">校园步行或骑行（km/周）</label>
-          <div class="control"><input id="walk" type="number" min="0" step="any" value="20"><span class="unit">km/周</span></div>
+          <label for="walk">Walking or cycling on campus (km/week)</label>
+          <div class="control"><input id="walk" type="number" min="0" step="any" value="20"><span class="unit">km/week</span></div>
         </div>
         <div class="field">
-          <label for="metroTrips">地铁次数（次/周）</label>
-          <div class="control"><input id="metroTrips" type="number" min="0" step="any" value="2"><span class="unit">次/周</span></div>
+          <label for="metroTrips">Metro trips (trips/week)</label>
+          <div class="control"><input id="metroTrips" type="number" min="0" step="any" value="2"><span class="unit">trips/week</span></div>
         </div>
         <div class="field">
-          <label for="metroKm">地铁单程距离（km/次）</label>
-          <div class="control"><input id="metroKm" type="number" min="0" step="any" value="15"><span class="unit">km/次</span></div>
+          <label for="metroKm">Metro one-way distance (km/trip)</label>
+          <div class="control"><input id="metroKm" type="number" min="0" step="any" value="15"><span class="unit">km/trip</span></div>
         </div>
         <div class="field">
-          <label for="rideTrips">网约车次数（次/月）</label>
-          <div class="control"><input id="rideTrips" type="number" min="0" step="any" value="2"><span class="unit">次/月</span></div>
+          <label for="rideTrips">Ride-hailing trips (trips/month)</label>
+          <div class="control"><input id="rideTrips" type="number" min="0" step="any" value="2"><span class="unit">trips/month</span></div>
         </div>
         <div class="field">
-          <label for="rideKm">网约车单程距离（km/次）</label>
-          <div class="control"><input id="rideKm" type="number" min="0" step="any" value="10"><span class="unit">km/次</span></div>
+          <label for="rideKm">Ride-hailing one-way distance (km/trip)</label>
+          <div class="control"><input id="rideKm" type="number" min="0" step="any" value="10"><span class="unit">km/trip</span></div>
         </div>
         <div class="field">
-          <label for="hsrTrips">高铁回家（往返次数/教学学期）</label>
-          <div class="control"><input id="hsrTrips" type="number" min="0" step="any" value="2"><span class="unit">次往返/学期</span></div>
+          <label for="hsrTrips">High-speed rail home (round trips/teaching semester)</label>
+          <div class="control"><input id="hsrTrips" type="number" min="0" step="any" value="2"><span class="unit">round trips/semester</span></div>
         </div>
         <div class="field">
-          <label for="hsrKm">高铁单程距离（km）</label>
-          <div class="control"><input id="hsrKm" type="number" min="0" step="any" value="220"><span class="unit">km/单程</span></div>
+          <label for="hsrKm">High-speed rail one-way distance (km)</label>
+          <div class="control"><input id="hsrKm" type="number" min="0" step="any" value="220"><span class="unit">km one way</span></div>
         </div>
-        <p class="note">网约车按独自乘坐计算，不除以乘客数。步行和骑行保留在这一步，使用阶段排放按 0 计算。</p>
+        <p class="note">Ride-hailing is counted as traveling alone and is not divided by the number of passengers. Walking and cycling stay in this step. Use-phase emissions are counted as 0.</p>
       </section>
 
       <section class="panel" data-step="1" hidden>
-        <h2>能源</h2>
-        <p class="hint">用电是整间宿舍的量。热水澡只记录，不进入总排放。</p>
+        <h2>Energy</h2>
+        <p class="hint">Electricity is for the whole dorm room. Hot showers are recorded only and are not included in the total.</p>
         <div class="field">
-          <label for="roomKwh">房间用电（kWh/最近 30 天）</label>
-          <div class="control"><input id="roomKwh" type="number" min="0" step="any" value="120"><span class="unit">kWh/30 天 · 整间</span></div>
+          <label for="roomKwh">Room electricity (kWh/last 30 days)</label>
+          <div class="control"><input id="roomKwh" type="number" min="0" step="any" value="120"><span class="unit">kWh/30 days · whole room</span></div>
         </div>
         <div class="field">
-          <label for="showerN">热水澡次数（次/周）</label>
-          <div class="control"><input id="showerN" type="number" min="0" step="any" value="6"><span class="unit">次/周</span></div>
+          <label for="showerN">Hot showers (times/week)</label>
+          <div class="control"><input id="showerN" type="number" min="0" step="any" value="6"><span class="unit">times/week</span></div>
         </div>
         <div class="field">
-          <label for="showerMin">每次时长（分钟）</label>
-          <div class="control"><input id="showerMin" type="number" min="0" step="any" value="8"><span class="unit">分钟/次</span></div>
+          <label for="showerMin">Duration per shower (minutes)</label>
+          <div class="control"><input id="showerMin" type="number" min="0" step="any" value="8"><span class="unit">min/shower</span></div>
         </div>
-        <p class="note"><strong>假设。</strong>房间用电按 4 人平均分摊，总排放只加李明的四分之一。热水澡未计入：画像没有能源种类和用量。</p>
+        <p class="note"><strong>Assumption.</strong> Room electricity is split equally among 4 people. Only Li Ming’s quarter is added to the total. Hot showers are excluded: the profile gives no energy type or amount.</p>
       </section>
 
       <section class="panel" data-step="2" hidden>
-        <h2>饮食</h2>
-        <p class="hint">四个输入是每周正餐顿数。大多数饭在校园食堂吃。</p>
+        <h2>Food</h2>
+        <p class="hint">The four inputs are main meals per week. Most meals are eaten in the campus canteen.</p>
         <div class="field">
-          <label for="beef">牛肉或羊肉（顿/周）</label>
-          <div class="control"><input id="beef" type="number" min="0" step="any" value="3"><span class="unit">顿/周</span></div>
+          <label for="beef">Beef or lamb (meals/week)</label>
+          <div class="control"><input id="beef" type="number" min="0" step="any" value="3"><span class="unit">meals/week</span></div>
         </div>
         <div class="field">
-          <label for="other">其他肉类（顿/周）</label>
-          <div class="control"><input id="other" type="number" min="0" step="any" value="8"><span class="unit">顿/周</span></div>
+          <label for="other">Other meat (meals/week)</label>
+          <div class="control"><input id="other" type="number" min="0" step="any" value="8"><span class="unit">meals/week</span></div>
         </div>
         <div class="field">
-          <label for="mixed">鱼、蛋、奶或大豆（顿/周）</label>
-          <div class="control"><input id="mixed" type="number" min="0" step="any" value="5"><span class="unit">顿/周</span></div>
+          <label for="mixed">Fish, eggs, dairy, or soy (meals/week)</label>
+          <div class="control"><input id="mixed" type="number" min="0" step="any" value="5"><span class="unit">meals/week</span></div>
         </div>
         <div class="field">
-          <label for="plant">以植物为主（顿/周）</label>
-          <div class="control"><input id="plant" type="number" min="0" step="any" value="5"><span class="unit">顿/周</span></div>
+          <label for="plant">Mostly plant-based (meals/week)</label>
+          <div class="control"><input id="plant" type="number" min="0" step="any" value="5"><span class="unit">meals/week</span></div>
         </div>
         <p class="note" id="mealNote"></p>
       </section>
 
       <section class="panel" data-step="3" hidden>
-        <h2>购物</h2>
-        <p class="hint">这两项会记录下来，不进入总排放。</p>
+        <h2>Shopping</h2>
+        <p class="hint">These two items are recorded and are not included in the total.</p>
         <div class="field">
-          <label for="parcels">网购包裹（个/月）</label>
-          <div class="control"><input id="parcels" type="number" min="0" step="any" value="3"><span class="unit">个/月</span></div>
+          <label for="parcels">Online parcels (parcels/month)</label>
+          <div class="control"><input id="parcels" type="number" min="0" step="any" value="3"><span class="unit">parcels/month</span></div>
         </div>
         <div class="field">
-          <label for="clothes">衣物（件/教学学期）</label>
-          <div class="control"><input id="clothes" type="number" min="0" step="any" value="2"><span class="unit">件/学期</span></div>
+          <label for="clothes">Clothing (items/teaching semester)</label>
+          <div class="control"><input id="clothes" type="number" min="0" step="any" value="2"><span class="unit">items/semester</span></div>
         </div>
-        <p class="note">未计入原因：画像没有材质、价格、包装重量和产品寿命。</p>
+        <p class="note">Excluded because the profile gives no material, price, packaging weight, or product lifetime.</p>
       </section>
 
       <section class="panel" data-step="4" hidden>
-        <h2>废弃物</h2>
-        <p class="hint">这两项会记录下来，不进入总排放。</p>
+        <h2>Waste</h2>
+        <p class="hint">These two items are recorded and are not included in the total.</p>
         <div class="field">
-          <label for="bags">一般垃圾（小袋/周）</label>
-          <div class="control"><input id="bags" type="number" min="0" step="any" value="3"><span class="unit">小袋/周</span></div>
+          <label for="bags">General waste (small bags/week)</label>
+          <div class="control"><input id="bags" type="number" min="0" step="any" value="3"><span class="unit">small bags/week</span></div>
         </div>
         <div class="field">
-          <label for="cans">可回收瓶或罐（个/周）</label>
-          <div class="control"><input id="cans" type="number" min="0" step="any" value="3"><span class="unit">个/周</span></div>
+          <label for="cans">Recyclable bottles or cans (items/week)</label>
+          <div class="control"><input id="cans" type="number" min="0" step="any" value="3"><span class="unit">items/week</span></div>
         </div>
-        <p class="note">未计入原因：没有质量和处理路径。画像没有说明小袋是个人还是全屋，这里不除以 4。</p>
+        <p class="note">Excluded because there is no mass and no treatment pathway. The profile does not say whether the small bags are personal or for the whole room, so the count is not divided by 4.</p>
       </section>
 
       <div class="nav">
-        <button type="button" class="ghost" id="prev" disabled>上一步</button>
-        <button type="button" class="primary" id="next">下一步</button>
-        <button type="button" class="ghost" id="reset">重置</button>
+        <button type="button" class="ghost" id="prev" disabled>Previous</button>
+        <button type="button" class="primary" id="next">Next</button>
+        <button type="button" class="ghost" id="reset">Reset</button>
       </div>
     </div>
   </div>
 
   <div id="dashboard" hidden>
     <div class="card">
-      <h2 id="resultTitle" tabindex="-1">结果</h2>
-      <p class="total-line"><strong id="totalKg">0</strong> kg CO₂e/教学学期</p>
-      <p class="hint">这个数是已量化类别之和：交通、李明分摊的宿舍用电、饮食。</p>
+      <h2 id="resultTitle" tabindex="-1">Results</h2>
+      <p class="total-line"><strong id="totalKg">0</strong> kg CO₂e/teaching semester</p>
+      <p class="hint">This number is the sum of the quantified categories: transport, Li Ming’s share of dorm electricity, and food.</p>
       <div class="nav">
-        <button type="button" class="primary" id="back">返回修改</button>
-        <button type="button" class="ghost" id="reset2">重置</button>
+        <button type="button" class="primary" id="back">Back to edit</button>
+        <button type="button" class="ghost" id="reset2">Reset</button>
       </div>
-      <div class="chart" id="chart" role="img" aria-label="分类排放对比"></div>
+      <div class="chart" id="chart" role="img" aria-label="Emissions by category"></div>
     </div>
     <div class="card subs" id="subs"></div>
     <div class="card">
-      <h2>未计入总排放</h2>
+      <h2>Not included in the total</h2>
       <ul class="plain" id="excluded"></ul>
     </div>
     <div class="card">
-      <h2>说明</h2>
+      <h2>Notes</h2>
       <ul class="plain" id="explain"></ul>
     </div>
     <div class="card">
-      <h2>减排建议</h2>
+      <h2>Reduction suggestions</h2>
       <ul class="plain" id="tips"></ul>
     </div>
     <div class="card">
-      <h2>占位因子</h2>
-      <p class="hint">占位因子，不是共享画像中的事实。</p>
+      <h2>Placeholder factors</h2>
+      <p class="hint">Placeholder factors, not facts from the shared profile.</p>
       <table>
-        <thead><tr><th>活动</th><th>占位因子</th></tr></thead>
+        <thead><tr><th>Activity</th><th>Placeholder factor</th></tr></thead>
         <tbody>
-          <tr><td>步行或骑行</td><td>0 kg CO₂e/km</td></tr>
-          <tr><td>地铁</td><td>0.04 kg CO₂e/人·km</td></tr>
-          <tr><td>网约车</td><td>0.20 kg CO₂e/km</td></tr>
-          <tr><td>高铁</td><td>0.03 kg CO₂e/人·km</td></tr>
-          <tr><td>牛肉或羊肉</td><td>6 kg CO₂e/顿</td></tr>
-          <tr><td>其他肉类</td><td>1.5 kg CO₂e/顿</td></tr>
-          <tr><td>鱼、蛋、奶或大豆</td><td>0.8 kg CO₂e/顿</td></tr>
-          <tr><td>以植物为主</td><td>0.4 kg CO₂e/顿</td></tr>
-          <tr><td>电力</td><td>0.57 kg CO₂e/kWh</td></tr>
+          <tr><td>Walking or cycling</td><td>0 kg CO₂e/km</td></tr>
+          <tr><td>Metro</td><td>0.04 kg CO₂e/passenger·km</td></tr>
+          <tr><td>Ride-hailing</td><td>0.20 kg CO₂e/km</td></tr>
+          <tr><td>High-speed rail</td><td>0.03 kg CO₂e/passenger·km</td></tr>
+          <tr><td>Beef or lamb</td><td>6 kg CO₂e/meal</td></tr>
+          <tr><td>Other meat</td><td>1.5 kg CO₂e/meal</td></tr>
+          <tr><td>Fish, eggs, dairy, or soy</td><td>0.8 kg CO₂e/meal</td></tr>
+          <tr><td>Mostly plant-based</td><td>0.4 kg CO₂e/meal</td></tr>
+          <tr><td>Electricity</td><td>0.57 kg CO₂e/kWh</td></tr>
         </tbody>
       </table>
     </div>
@@ -287,7 +287,7 @@
 
 <div class="sticky">
   <div class="sticky-inner">
-    <span>本学期估算 · 已量化类别</span>
+    <span>This semester · quantified categories</span>
     <strong id="previewTotal">0 kg CO₂e</strong>
   </div>
 </div>
@@ -320,7 +320,7 @@ function num(id) {
 }
 function fmt(n) {
   const v = Math.round(n * 10) / 10;
-  return v.toLocaleString("zh-CN", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  return v.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 }
 
 function compute() {
@@ -368,7 +368,7 @@ function compute() {
 
 function mealNote() {
   const sum = num("beef") + num("other") + num("mixed") + num("plant");
-  document.getElementById("mealNote").innerHTML = "当前四类合计 <strong>" + fmt(sum) + "</strong> 顿/周。每周约 2 顿外卖已经包含在这些正餐里，不要再加餐数。";
+  document.getElementById("mealNote").innerHTML = "The four categories currently total <strong>" + fmt(sum) + "</strong> meals/week. About 2 takeaway meals per week are already included in these main meals. Do not add extra meals.";
 }
 
 function renderPreview() {
@@ -385,7 +385,7 @@ function showStep(n) {
   panels.forEach((p, i) => { p.hidden = i !== n; });
   stepButtons.forEach((b, i) => b.setAttribute("aria-current", i === n ? "step" : "false"));
   prevBtn.disabled = n === 0;
-  nextBtn.textContent = n === 4 ? "查看结果" : "下一步";
+  nextBtn.textContent = n === 4 ? "View results" : "Next";
 }
 
 function barRow(name, kg, cls, max) {
@@ -395,28 +395,29 @@ function barRow(name, kg, cls, max) {
 
 function tipsFor(r) {
   const items = [
-    { kg: r.beefKg, text: halfSwap("牛肉或羊肉", r.beefKg, r.beefMeals, FACTORS.beef, FACTORS.plant, r.total) },
-    { kg: r.otherKg, text: halfSwap("其他肉类", r.otherKg, r.otherMeals, FACTORS.other, FACTORS.plant, r.total) },
-    { kg: r.mixedKg, text: halfSwap("鱼、蛋、奶或大豆", r.mixedKg, r.mixedMeals, FACTORS.mixed, FACTORS.plant, r.total) },
-    { kg: r.plantKg, text: "以植物为主的正餐目前为 " + fmt(r.plantKg) + " kg CO₂e。若减少一半，该项约减少 " + fmt(r.plantKg / 2) + " kg，学期总排放约变为 " + fmt(r.total - r.plantKg / 2) + " kg。" },
-    { kg: r.elecKg, text: "分摊给李明的宿舍用电目前为 " + fmt(r.elecKg) + " kg CO₂e。若房间用电减少 20%，该项约减少 " + fmt(r.elecKg * 0.2) + " kg，学期总排放约变为 " + fmt(r.total - r.elecKg * 0.2) + " kg。" },
-    { kg: r.rideKg, text: "网约车目前为 " + fmt(r.rideKg) + " kg CO₂e，按独自乘坐、未除以乘客数。若这些路程改为地铁，因子从 0.20 降到 0.04 kg/人·km，该项约减少 " + fmt(r.rideKm * (FACTORS.ride - FACTORS.metro)) + " kg，学期总排放约变为 " + fmt(r.total - r.rideKm * (FACTORS.ride - FACTORS.metro)) + " kg。" },
+    { kg: r.beefKg, text: halfSwap("Beef or lamb", r.beefKg, r.beefMeals, FACTORS.beef, FACTORS.plant, r.total) },
+    { kg: r.otherKg, text: halfSwap("Other meat", r.otherKg, r.otherMeals, FACTORS.other, FACTORS.plant, r.total) },
+    { kg: r.mixedKg, text: halfSwap("Fish, eggs, dairy, or soy", r.mixedKg, r.mixedMeals, FACTORS.mixed, FACTORS.plant, r.total) },
+    { kg: r.plantKg, text: "Mostly plant-based meals are currently " + fmt(r.plantKg) + " kg CO₂e. Cutting them in half would lower this item by about " + fmt(r.plantKg / 2) + " kg, and the semester total would be about " + fmt(r.total - r.plantKg / 2) + " kg." },
+    { kg: r.elecKg, text: "Li Ming’s share of dorm electricity is currently " + fmt(r.elecKg) + " kg CO₂e. A 20% drop in room electricity would lower this item by about " + fmt(r.elecKg * 0.2) + " kg, and the semester total would be about " + fmt(r.total - r.elecKg * 0.2) + " kg." },
+    { kg: r.rideKg, text: "Ride-hailing is currently " + fmt(r.rideKg) + " kg CO₂e, counted as traveling alone and not divided by passengers. Switching these trips to metro would drop the factor from 0.20 to 0.04 kg/passenger·km, lower this item by about " + fmt(r.rideKm * (FACTORS.ride - FACTORS.metro)) + " kg, and bring the semester total to about " + fmt(r.total - r.rideKm * (FACTORS.ride - FACTORS.metro)) + " kg." },
     { kg: r.hsrKg, text: hsrTip(r) },
-    { kg: r.metroKg, text: "地铁目前为 " + fmt(r.metroKg) + " kg CO₂e。若公里数减少一半，该项约减少 " + fmt(r.metroKg / 2) + " kg，学期总排放约变为 " + fmt(r.total - r.metroKg / 2) + " kg。" }
+    { kg: r.metroKg, text: "Metro is currently " + fmt(r.metroKg) + " kg CO₂e. Cutting the distance in half would lower this item by about " + fmt(r.metroKg / 2) + " kg, and the semester total would be about " + fmt(r.total - r.metroKg / 2) + " kg." }
   ];
   const picked = items.filter(item => item.kg > 0 && item.text).sort((a, b) => b.kg - a.kg).slice(0, 3);
-  if (!picked.length) return ["当前已量化排放为 0 kg CO₂e。饮食、宿舍用电或交通的输入增大后，这里会按排放较高的项目给出建议。"];
+  if (!picked.length) return ["Quantified emissions are currently 0 kg CO₂e. When food, dorm electricity, or transport inputs rise, suggestions for the higher-emitting items will appear here."];
   return picked.map(item => item.text);
 }
 
 function halfSwap(name, kg, meals, from, to, total) {
   const saved = (meals / 2) * (from - to);
-  return name + "目前为 " + fmt(kg) + " kg CO₂e。若其中一半改为以植物为主的正餐，该项约减少 " + fmt(saved) + " kg，学期总排放约变为 " + fmt(total - saved) + " kg。";
+  return name + " is currently " + fmt(kg) + " kg CO₂e. Replacing half of these meals with mostly plant-based meals would lower this item by about " + fmt(saved) + " kg, and the semester total would be about " + fmt(total - saved) + " kg.";
 }
 function hsrTip(r) {
   const cut = Math.min(r.hsrTrips, 1);
   const saved = cut * r.hsrKmOne * 2 * FACTORS.hsr;
-  return "高铁目前为 " + fmt(r.hsrKg) + " kg CO₂e。若减少 " + fmt(cut) + " 次往返，该项约减少 " + fmt(saved) + " kg，学期总排放约变为 " + fmt(r.total - saved) + " kg。";
+  const tripWord = cut === 1 ? "round trip" : "round trips";
+  return "High-speed rail is currently " + fmt(r.hsrKg) + " kg CO₂e. Removing " + fmt(cut) + " " + tripWord + " would lower this item by about " + fmt(saved) + " kg, and the semester total would be about " + fmt(r.total - saved) + " kg.";
 }
 
 function renderDashboard(existing) {
@@ -424,40 +425,40 @@ function renderDashboard(existing) {
   document.getElementById("totalKg").textContent = fmt(r.total);
   const max = Math.max(r.transportKg, r.elecKg, r.foodKg);
   document.getElementById("chart").innerHTML =
-    barRow("饮食", r.foodKg, "food", max) +
-    barRow("能源", r.elecKg, "energy", max) +
-    barRow("交通", r.transportKg, "transport", max);
+    barRow("Food", r.foodKg, "food", max) +
+    barRow("Energy", r.elecKg, "energy", max) +
+    barRow("Transport", r.transportKg, "transport", max);
 
   document.getElementById("subs").innerHTML =
-    "<div class='sub'><h3>交通 · " + fmt(r.transportKg) + " kg</h3><ul>" +
-    "<li>步行或骑行 " + fmt(r.walkKm) + " km/学期，" + fmt(r.walkKg) + " kg。使用阶段按 0 计入。</li>" +
-    "<li>地铁 " + fmt(r.metroKm) + " km/学期，" + fmt(r.metroKg) + " kg。</li>" +
-    "<li>网约车 " + fmt(r.rideKm) + " km/学期，" + fmt(r.rideKg) + " kg。独自乘坐，未除以乘客数。</li>" +
-    "<li>高铁 " + fmt(r.hsrKm) + " km/学期，" + fmt(r.hsrKg) + " kg。</li></ul></div>" +
-    "<div class='sub'><h3>能源 · " + fmt(r.elecKg) + " kg</h3><ul>" +
-    "<li>房间最近 30 天 " + fmt(r.room) + " kWh，换到 126 天约为 " + fmt(r.roomSem) + " kWh。</li>" +
-    "<li>按 4 人平均分摊，李明 " + fmt(r.personalSem) + " kWh，" + fmt(r.elecKg) + " kg。总排放只加这一份。</li></ul></div>" +
-    "<div class='sub'><h3>饮食 · " + fmt(r.foodKg) + " kg</h3><ul>" +
-    "<li>牛肉或羊肉 " + fmt(r.beefMeals) + " 顿/学期，" + fmt(r.beefKg) + " kg。</li>" +
-    "<li>其他肉类 " + fmt(r.otherMeals) + " 顿/学期，" + fmt(r.otherKg) + " kg。</li>" +
-    "<li>鱼、蛋、奶或大豆 " + fmt(r.mixedMeals) + " 顿/学期，" + fmt(r.mixedKg) + " kg。</li>" +
-    "<li>以植物为主 " + fmt(r.plantMeals) + " 顿/学期，" + fmt(r.plantKg) + " kg。</li></ul></div>";
+    "<div class='sub'><h3>Transport · " + fmt(r.transportKg) + " kg</h3><ul>" +
+    "<li>Walking or cycling: " + fmt(r.walkKm) + " km/semester, " + fmt(r.walkKg) + " kg. Use phase counted as 0.</li>" +
+    "<li>Metro: " + fmt(r.metroKm) + " km/semester, " + fmt(r.metroKg) + " kg.</li>" +
+    "<li>Ride-hailing: " + fmt(r.rideKm) + " km/semester, " + fmt(r.rideKg) + " kg. Traveling alone, not divided by passengers.</li>" +
+    "<li>High-speed rail: " + fmt(r.hsrKm) + " km/semester, " + fmt(r.hsrKg) + " kg.</li></ul></div>" +
+    "<div class='sub'><h3>Energy · " + fmt(r.elecKg) + " kg</h3><ul>" +
+    "<li>The room used " + fmt(r.room) + " kWh over the last 30 days, about " + fmt(r.roomSem) + " kWh over 126 days.</li>" +
+    "<li>Split equally among 4 people, Li Ming’s share is " + fmt(r.personalSem) + " kWh, " + fmt(r.elecKg) + " kg. Only this share is added to the total.</li></ul></div>" +
+    "<div class='sub'><h3>Food · " + fmt(r.foodKg) + " kg</h3><ul>" +
+    "<li>Beef or lamb: " + fmt(r.beefMeals) + " meals/semester, " + fmt(r.beefKg) + " kg.</li>" +
+    "<li>Other meat: " + fmt(r.otherMeals) + " meals/semester, " + fmt(r.otherKg) + " kg.</li>" +
+    "<li>Fish, eggs, dairy, or soy: " + fmt(r.mixedMeals) + " meals/semester, " + fmt(r.mixedKg) + " kg.</li>" +
+    "<li>Mostly plant-based: " + fmt(r.plantMeals) + " meals/semester, " + fmt(r.plantKg) + " kg.</li></ul></div>";
 
   document.getElementById("excluded").innerHTML =
-    "<li>热水澡：每周 " + fmt(r.showerN) + " 次，每次 " + fmt(r.showerMin) + " 分钟，一学期约 " + fmt(r.showersSem) + " 次。未计入，因为没有能源种类和用量。</li>" +
-    "<li>网购包裹：约 " + fmt(r.parcelsSem) + " 个/学期。未计入，因为没有材质、价格、包装重量和产品寿命。</li>" +
-    "<li>衣物：" + fmt(r.clothes) + " 件/学期。未计入，原因同上。</li>" +
-    "<li>一般垃圾：约 " + fmt(r.bagsSem) + " 小袋/学期。未计入，因为没有质量和处理路径，也没有除以 4。</li>" +
-    "<li>可回收瓶或罐：约 " + fmt(r.cansSem) + " 个/学期。未计入，原因同上。</li>" +
-    "<li>外卖包装和配送：未计入。食物本身已经在每周正餐里，画像没有包装重量和配送距离。</li>";
+    "<li>Hot showers: " + fmt(r.showerN) + " times per week, " + fmt(r.showerMin) + " minutes each, about " + fmt(r.showersSem) + " times per semester. Excluded because there is no energy type or amount.</li>" +
+    "<li>Online parcels: about " + fmt(r.parcelsSem) + " per semester. Excluded because there is no material, price, packaging weight, or product lifetime.</li>" +
+    "<li>Clothing: " + fmt(r.clothes) + " items per semester. Excluded for the same reason.</li>" +
+    "<li>General waste: about " + fmt(r.bagsSem) + " small bags per semester. Excluded because there is no mass and no treatment pathway, and the count is not divided by 4.</li>" +
+    "<li>Recyclable bottles or cans: about " + fmt(r.cansSem) + " per semester. Excluded for the same reason.</li>" +
+    "<li>Takeaway packaging and delivery: excluded. The food itself is already in the weekly main meals, and the profile gives no packaging weight or delivery distance.</li>";
 
   document.getElementById("explain").innerHTML =
-    "<li>报告周期是每教学学期。假设一学期 18 周；每月按 4 周计，所以一学期按 4.5 个月换算。最近 30 天的用电按 126 天换算，不当成一个日历月。</li>" +
-    "<li>这两条时间换算都是假设，不是共享画像里的事实。需要它们，是因为画像同时用了周、月、30 天和教学学期。</li>" +
-    "<li>宿舍用电按 4 人平均分摊。120 kWh 是整间房的量，画像没有给出李明个人的用电。</li>" +
-    "<li>总排放 = 交通 + 李明分摊的用电 + 饮食。每项是学期活动量乘占位因子。</li>" +
-    "<li>每周约 2 顿外卖已经包含在正餐顿数里，餐数没有再加 2。</li>" +
-    "<li>购物、废弃物、热水澡和外卖包装没有加进这个总数。</li>";
+    "<li>The reporting period is one teaching semester. One semester is assumed to be 18 weeks. Each month is counted as 4 weeks, so one semester is converted as 4.5 months. Electricity for the last 30 days is scaled to 126 days and is not treated as one calendar month.</li>" +
+    "<li>Both time conversions are assumptions, not facts from the shared profile. They are needed because the profile uses weeks, months, 30-day windows, and teaching semesters together.</li>" +
+    "<li>Dorm electricity is split equally among 4 people. 120 kWh is the whole room. The profile does not give Li Ming’s personal use.</li>" +
+    "<li>Total = transport + Li Ming’s share of electricity + food. Each item is semester activity multiplied by a placeholder factor.</li>" +
+    "<li>About 2 takeaway meals per week are already included in the main-meal counts. Those meals were not added again.</li>" +
+    "<li>Shopping, waste, hot showers, and takeaway packaging are not included in this total.</li>";
 
   document.getElementById("tips").innerHTML = tipsFor(r).map(t => "<li>" + t + "</li>").join("");
 }

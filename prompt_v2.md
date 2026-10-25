@@ -3,151 +3,151 @@
 Group: 9
 Members: Fu Diyan
 Date: 2026.10.12
-AI tool: Cursor（Grok）
+AI tool: Cursor (Grok)
 
 
 ## C — Context
 
-我是一名正在完成碳核算课程项目的本科生。请为一个虚拟的上海交通大学学生做个人碳足迹计算器。这个学生叫李明，是全班共用的课程案例，不是对全体交大学生的统计描述。
+I am an undergraduate completing a carbon-accounting course project. Build a personal carbon footprint calculator for a fictional Shanghai Jiao Tong University student named Li Ming. He is a shared course case for the whole class, not a statistical description of all SJTU students.
 
-这是课程中的探索性原型。共享画像里的活动数据是默认事实。排放因子是原型用的占位值，页面上必须标成占位，不能写成已核实的官方因子。
+This is an exploratory prototype for the course. Activity data in the shared profile are the default facts. Emission factors are placeholder values for the prototype. The page must label them as placeholders. Do not present them as verified official factors.
 
 ## O — Objective
 
-做一个可在浏览器中直接打开的交互式网页计算器。它需要：
+Build an interactive web calculator that opens directly in a browser. It needs to:
 
-- 接收活动数据，默认填入李明的共享事实
-- 用 CO₂e 估算排放
-- 展示结果，并简短解释这个数代表什么、包含什么、不包含什么
-- 给出与当前结果相关的减排建议
+- Accept activity data, with Li Ming’s shared facts filled in by default
+- Estimate emissions in CO₂e
+- Show the result and briefly explain what the number means, what it includes, and what it excludes
+- Give reduction suggestions related to the current result
 
-计算方式：先把活动量换到同一个报告周期，再计算「活动数据 × 排放因子」，最后把已量化的类别相加。用户可以修改输入，用来比较不同活动水平。重置后回到李明的默认值。
+Method: first convert activity amounts to the same reporting period, then calculate activity data × emission factor, then add the quantified categories. The user can change the inputs to compare different activity levels. Reset returns to Li Ming’s defaults.
 
 ## S — Style
 
-用分步向导，不要把所有问题放在同一屏。按顺序分为五步：
+Use a step-by-step wizard. Do not put every question on one screen. Use five steps, in this order:
 
-1. 交通：校园步行或骑行、地铁、网约车、高铁回家
-2. 能源：宿舍用电、热水澡
-3. 饮食
-4. 购物：网购包裹、衣物
-5. 废弃物
+1. Transport: walking or cycling on campus, metro, ride-hailing, high-speed rail home
+2. Energy: dorm electricity, hot showers
+3. Food
+4. Shopping: online parcels, clothing
+5. Waste
 
-每一步只放这一类的输入。可以返回上一步修改。
+Each step shows only that category’s inputs. The user can go back and edit an earlier step.
 
-界面简洁，使用深色主题，文字和背景对比清楚，输入框有标签，能用键盘操作。每个类别配一个图标。
+Keep the interface simple, with a dark theme, clear contrast between text and background, labeled inputs, and keyboard access. Give each category an icon.
 
-填写过程中，页面顶部或底部有一条粘性预览条，始终显示当前估算的总排放，并随输入立即更新。
+While the form is being filled in, keep a sticky preview bar at the top or bottom. It always shows the current estimated total and updates as soon as an input changes.
 
-最后一步确认后进入结果仪表板。仪表板包含总排放、分类对比图、简短解释和减排建议。用户从仪表板返回修改输入时，预览条、图表和建议一起更新。
+After the last step is confirmed, open a results dashboard. The dashboard includes the total, a category comparison chart, a short explanation, and reduction suggestions. When the user goes back from the dashboard to edit inputs, the preview bar, chart, and suggestions update together.
 
 ## T — Tone
 
-简洁、理性。问题用短句。结果先给数字，再说明原因。减排建议只针对当前算出来的活动，不说教，不使用夸张的鼓励用语。
+Concise and rational. Use short sentences for the questions. Lead with the number, then explain why. Reduction suggestions address only activities in the current estimate. Do not lecture, and do not use exaggerated encouragement.
 
 ## A — Audience
 
-计算器的使用者和核算对象都是李明。默认输入使用下面的共享事实，不要改这些数字。画像没有给出的信息不要写成事实。下面标明的假设，在页面上用「假设」或「占位」标出。
+Both the user of the calculator and the person being accounted for are Li Ming. Use the shared facts below as the default inputs. Do not change these numbers. Do not write anything the profile does not give as a fact. On the page, label the assumptions below as “assumption” or “placeholder.”
 
-### 共享事实
+### Shared facts
 
-身份：李明，20 岁，上海交通大学工科二年级。住四人宿舍，日常主要在校园，偶尔离校或回家探望家人。
+Identity: Li Ming, age 20, a second-year engineering student at Shanghai Jiao Tong University. He lives in a four-person dorm, spends most days on campus, and occasionally leaves campus or goes home to visit family.
 
-出行：
+Travel:
 
-- 校园内步行或骑行：约 20 km/周
-- 地铁：每周 2 次单程，每次 15 km
-- 网约车：每月 2 次单程，每次 10 km，通常独自乘坐
+- Walking or cycling on campus: about 20 km/week
+- Metro: 2 one-way trips per week, 15 km each
+- Ride-hailing: 2 one-way trips per month, 10 km each, usually alone
 
-饮食：
+Food:
 
-- 每周 21 顿正餐：牛肉或羊肉 3 顿，其他肉类 8 顿，鱼、蛋、奶或大豆 5 顿，以植物为主 5 顿
-- 大多数饭在校园食堂吃
-- 每周 2 顿外卖已经包含在这 21 顿里
+- 21 main meals per week: 3 beef or lamb, 8 other meat, 5 fish, eggs, dairy, or soy, and 5 mostly plant-based
+- Most meals are eaten in the campus canteen
+- About 2 takeaway meals per week are already included in these 21 meals
 
-宿舍与能源：
+Dorm and energy:
 
-- 四人合住一间
-- 房间用电：最近 30 天 120 kWh，这是整间房的用电
-- 热水澡：每周 6 次，每次约 8 分钟
+- Four people share one room
+- Room electricity: 120 kWh over the last 30 days, for the whole room
+- Hot showers: 6 per week, about 8 minutes each
 
-商品与快递：
+Goods and parcels:
 
-- 网购：3 个包裹/月
-- 衣物：每教学学期 2 件
+- Online shopping: 3 parcels/month
+- Clothing: 2 items per teaching semester
 
-城际出行：
+Intercity travel:
 
-- 每教学学期乘坐高铁回家 2 次往返
-- 单程约 220 km
+- 2 round trips home by high-speed rail per teaching semester
+- About 220 km one way
 
-废弃物：
+Waste:
 
-- 一般垃圾：约 3 个小袋/周
-- 可回收瓶或罐：约 3 个/周
+- General waste: about 3 small bags/week
+- Recyclable bottles or cans: about 3 per week
 
-### 假设
+### Assumptions
 
-假设 1：结果按「每教学学期」报告。一学期按 18 周计算。画像里「每月」的活动按 1 个月 = 4 周换算，因此一学期按 4.5 个月计算。用电的「最近 30 天」不当成一个日历月，一学期按 18 × 7 = 126 天计算。
+Assumption 1: Results are reported per teaching semester. One semester is 18 weeks. Activities given per month are converted with 1 month = 4 weeks, so one semester is 4.5 months. Electricity for the last 30 days is not treated as one calendar month. One semester is 18 × 7 = 126 days.
 
-需要这条假设是因为画像同时使用周、月、30 天和教学学期，不统一就不能相加。18 周和「1 个月 = 4 周」都不是画像给出的事实。
+This assumption is needed because the profile mixes weeks, months, 30-day windows, and teaching semesters. Those amounts cannot be added until they share one period. Neither 18 weeks nor “1 month = 4 weeks” is a fact from the profile.
 
-假设 2：宿舍用电按 4 人平均分摊，计入李明的是房间用电的四分之一。
+Assumption 2: Dorm electricity is split equally among 4 people. Li Ming is assigned one quarter of the room’s electricity.
 
-需要这条假设是因为 120 kWh 是整间房的量，画像没有给出他个人的用电。
+This assumption is needed because 120 kWh is the whole room, and the profile does not give his personal use.
 
-### 只记录、不计入总排放
+### Record only, do not add to the total
 
-下列活动要出现在输入里，也要出现在结果说明里，但不乘排放因子，不加进总排放：
+The activities below appear in the inputs and in the results notes, but they are not multiplied by an emission factor and are not added to the total:
 
-- 热水澡：只有次数和时长，没有能源种类和用量
-- 网购包裹和衣物：只有数量，没有材质、价格、包装重量和产品寿命
-- 一般垃圾和可回收瓶罐：只有袋数和个数，没有质量，也没有处理路径。画像没有说明 3 个小袋是个人还是全屋，不要除以 4
-- 外卖的包装和配送：食物本身已经在 21 顿正餐里，画像没有包装重量和配送距离
+- Hot showers: only a count and a duration, with no energy type or amount
+- Online parcels and clothing: only counts, with no material, price, packaging weight, or product lifetime
+- General waste and recyclable bottles or cans: only bag and item counts, with no mass and no treatment pathway. The profile does not say whether the 3 small bags are personal or for the whole room. Do not divide by 4
+- Takeaway packaging and delivery: the food itself is already in the 21 main meals. The profile gives no packaging weight or delivery distance
 
-页面写明每一项未计入的原因。
+State on the page why each item is excluded.
 
-## 核算规则
+## Accounting rules
 
-输入框保持画像原来的时间单位，不要求用户自己换算。程序按假设 1 换到每教学学期后再计算。
+Keep each input in the profile’s original time unit. Do not ask the user to convert. The program converts to per teaching semester using Assumption 1, then calculates.
 
-已量化活动使用下面的占位因子。页面要列出因子、单位，并标明「占位因子，不是共享画像中的事实」：
+Quantified activities use the placeholder factors below. The page must list each factor and its unit, and label them “placeholder factors, not facts from the shared profile”:
 
-| 活动 | 占位因子 |
+| Activity | Placeholder factor |
 | --- | --- |
-| 步行或骑行 | 0 kg CO₂e/km |
-| 地铁 | 0.04 kg CO₂e/人·km |
-| 网约车 | 0.20 kg CO₂e/km |
-| 高铁 | 0.03 kg CO₂e/人·km |
-| 牛肉或羊肉 | 6 kg CO₂e/顿 |
-| 其他肉类 | 1.5 kg CO₂e/顿 |
-| 鱼、蛋、奶或大豆 | 0.8 kg CO₂e/顿 |
-| 以植物为主 | 0.4 kg CO₂e/顿 |
-| 电力 | 0.57 kg CO₂e/kWh |
+| Walking or cycling | 0 kg CO₂e/km |
+| Metro | 0.04 kg CO₂e/passenger·km |
+| Ride-hailing | 0.20 kg CO₂e/km |
+| High-speed rail | 0.03 kg CO₂e/passenger·km |
+| Beef or lamb | 6 kg CO₂e/meal |
+| Other meat | 1.5 kg CO₂e/meal |
+| Fish, eggs, dairy, or soy | 0.8 kg CO₂e/meal |
+| Mostly plant-based | 0.4 kg CO₂e/meal |
+| Electricity | 0.57 kg CO₂e/kWh |
 
-步行和骑行仍放在交通步骤里。使用阶段按 0 计算，并在说明里写明。
+Walking and cycling stay in the transport step. Their use-phase emissions are counted as 0, and the notes say so.
 
-网约车默认按独自乘坐，不除以乘客数。
+Ride-hailing defaults to traveling alone and is not divided by the number of passengers.
 
-饮食只设四个顿数输入，默认分别是 3、8、5、5。不要再设一个外卖顿数输入。旁边注明：每周约 2 顿外卖已经包含在这些正餐里。
+Food has only four meal-count inputs, defaulting to 3, 8, 5, and 5. Do not add a separate takeaway-meal input. Note beside them that about 2 takeaway meals per week are already included in these main meals.
 
-用电输入默认显示房间总量 120 kWh / 30 天。结果里分别写出房间总量和按假设 2 分给李明的量，总排放只加他那一份。
+The electricity input defaults to the room total, 120 kWh / 30 days. The results show both the room total and Li Ming’s share under Assumption 2. Only his share is added to the total.
 
-总排放等于已量化类别之和，单位是 kg CO₂e/教学学期。交通、能源、饮食分别给出小计。未量化活动单独列在总排放下面。
+The total is the sum of the quantified categories, in kg CO₂e per teaching semester. Transport, energy, and food each have a subtotal. Unquantified activities are listed separately, below the total.
 
-同一项活动只计算一次。
+Each activity is counted only once.
 
 ## R — Response
 
-只返回一个完整的 HTML 文件，里面包含所需的 HTML、CSS 和 JavaScript。保存后能在浏览器直接打开。不要拆成多个文件，不要引用外部图片、字体或网络库，不要只给实现说明。
+Return only one complete HTML file containing the HTML, CSS, and JavaScript. After it is saved, it must open directly in a browser. Do not split it into multiple files, do not reference external images, fonts, or libraries, and do not return only an implementation note.
 
-页面包含：
+The page includes:
 
-- 五步活动输入。每个输入旁边写明时间单位
-- 粘性预览条，显示当前总排放
-- 计算按钮和重置按钮。重置恢复李明的全部默认值
-- 结果仪表板：总排放、带图标的分类对比图、各类小计
-- 简短解释：报告周期、换算假设、用电分摊、占位因子、总排放包含哪些类别、哪些活动未计入、外卖已经包含在 21 顿里
-- 最多三条减排建议。每条指向一个当前排放较高的已量化活动，并说明如果减少或替换这项活动，估算会怎么变化
+- Five steps of activity inputs. Each input states its time unit
+- A sticky preview bar showing the current total
+- A calculate button and a reset button. Reset restores all of Li Ming’s defaults
+- A results dashboard: the total, a category comparison chart with icons, and category subtotals
+- A short explanation: the reporting period, the conversion assumptions, the electricity split, the placeholder factors, which categories are in the total, which activities are excluded, and that takeaway is already included in the 21 meals
+- At most three reduction suggestions. Each one points to a quantified activity that is currently high, and states how the estimate would change if that activity were reduced or replaced
 
-界面文字使用中文。
+Use English for all interface text.
