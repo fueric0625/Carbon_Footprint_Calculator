@@ -94,7 +94,7 @@ Beef or lamb is currently 324 kilograms: 54 meals at 100 grams each, times a pro
 
 Electricity is different. The factor has a source, so the 14.5 kilograms is arithmetic on a published number. The 20 percent is still a scenario — but this one does not rest on an unverified factor.
 
-One check on plausibility. Two 18-week semesters would be about 1.6 tonnes a year, below the 2.54 and 3.84 from Lecture 1. The gap is the categories we leave out, and a year counted as 36 weeks rather than 52.
+One check on plausibility. Two 18-week semesters is about 1.6 tonnes. Our food line alone is 1.3 tonnes — and the Tongji study of 2015 puts canteen and restaurant meals at 1.24 tonnes per student a year, over about the same nine months. The total stays below 2.54 because showers, study, goods and waste are outside this boundary.
 
 ## 5:50–6:15 排除项一句
 
@@ -136,6 +136,10 @@ He can see, in one semester, which numbers have a source, and which numbers stil
 **食物为什么这么大？** 每周 3 顿 × 18 周 = 54 顿，乘我们假设的每顿 100 g，得到 5.4 kg 食物，再乘临时的 60 kg CO₂e/kg，是 324 kg。画像只给顿数，份量是我们加的假设；因子也还没有出处。所以这个排序是示意，不是结论。
 
 **为什么比讲义的 2.54 和 3.84 低？** 两个 18 周学期约 1.6 t。低的三处原因：洗澡、购物、垃圾在边界外；一年按 36 周算，不是 52 周；食物用的是临时的每公斤因子，份量还得我们自己假设。所以这是一份偏低的不完整账，不是算错了。
+
+**你的边界更接近哪一篇？** 食物这侧接近朱文（它把食物生产算进来，我们用每公斤食物因子）；电力这侧接近李文（只算宿舍电表）。两边都比我们宽，所以我们的数更低。
+
+**食物占比为什么比两篇都高？** 分母不同。李文餐饮占 34%、朱文食物占 47%，这 13 个百分点也是同一个原因。我们的分母只有食物、电力、交通三项，所以单看占比会偏高。
 
 **有出处的两项到底是 CO₂ 还是 CO₂e？** 都是 CO₂。补上 CH₄ 和 N₂O 只会更高，所以 96.1 偏在低的一侧。
 

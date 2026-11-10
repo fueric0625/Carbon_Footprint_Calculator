@@ -213,9 +213,11 @@ def main(out="roadshow/Group9_Roadshow_Card.pptx"):
         ("Why is food so large?",
          "3 beef meals a week × 18 weeks × an assumed 100 g portion × a provisional 60 kg CO₂e/kg. The portion is ours, so the ranking is illustrative."),
         ("Why is your figure below 2.54 and 3.84?",
-         "Two 18-week semesters is about 1.6 t. Showers, shopping and waste are outside the boundary, and the year is 36 weeks, not 52."),
+         "Two 18-week semesters is about 1.6 t. Our food alone is 1.3 t, against 1.24 t in Li et al. 2015 over about the same nine months. Showers, study, goods and waste are outside."),
         ("Why leave out showers and waste?",
-         "The profile gives counts, not energy, mass, or a treatment pathway. They stay on the page and out of the total."),
+         "The profile gives counts, not energy, mass, or a pathway. Li et al. put showers at 0.65 t a year, 18 per cent of their total, so the gap is material — we just cannot fill it honestly."),
+        ("Which paper is your boundary closer to?",
+         "Zhu’s on food, because our factors are per kilogram of food. Li’s on electricity, because we count only the room meter. We sit between them, and lower, because goods and waste are out."),
         ("Is 120 kWh Li Ming’s own use?",
          "No. It is the whole room over 30 days. He is one quarter of four, scaled to the semester."),
         ("A battery car is always lower, right?",
@@ -224,13 +226,13 @@ def main(out="roadshow/Group9_Roadshow_Card.pptx"):
     tf = tb(s, M, 6.56, CW, 4.6).text_frame
     for i, (q, a) in enumerate(qa):
         p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
-        p.line_spacing = 1.3
-        p.space_after = Pt(5)
-        seg(p, q, size=8, bold=True)
+        p.line_spacing = 1.28
+        p.space_after = Pt(3)
+        seg(p, q, size=7.4, bold=True)
         p2 = tf.add_paragraph()
-        p2.line_spacing = 1.3
-        p2.space_after = Pt(7)
-        seg(p2, a, size=8, color=SOFT)
+        p2.line_spacing = 1.28
+        p2.space_after = Pt(5)
+        seg(p2, a, size=7.4, color=SOFT)
 
     # footer
     rule(s, M, H - 0.62, CW)

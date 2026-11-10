@@ -738,13 +738,14 @@ function renderDashboard(existing) {
   document.getElementById("tips").innerHTML = tipsFor(r).map(function (t) { return "<li>" + t + "</li>"; }).join("");
 
   const perYear = r.total * 2 / 1000;
+  const foodYear = r.foodKg * 2 / 1000;
   document.getElementById("explain").innerHTML =
     "<li><strong>Reporting period.</strong> One teaching semester, currently " + count(r.weeks) + " weeks. Each month counts as 4 weeks; electricity for the last 30 days is scaled to " + count(r.days) + " days.</li>" +
     "<li><strong>Assumptions.</strong> 18 weeks, 1 month = 4 weeks, and the portion sizes on the Food page are not in the shared profile. They are needed because the profile mixes weeks, months, and semesters, and gives meal counts rather than weights.</li>" +
     "<li><strong>Attribution.</strong> 120 kWh is the whole room over 30 days. Li Ming is assigned one quarter, and only that quarter enters the total.</li>" +
     "<li><strong>Units.</strong> Electricity and rail are published as CO₂; the rest are unverified CO₂e. The reported total adds the two, so it is not a complete CO₂e figure.</li>" +
     "<li><strong>No double counting.</strong> The 2 takeaway meals a week are already inside the main meals and are not added again.</li>" +
-    "<li><strong>Plausibility check.</strong> Two 18-week semesters would be about " + fmt(perYear) + " t a year, below the 2.54 and 3.84 t student averages in Lecture 1. The gap is the categories left out above, and a year counted as 36 weeks rather than 52.</li>";
+    "<li><strong>Plausibility check.</strong> Two 18-week semesters is about " + fmt(perYear) + " t. The food line alone would be " + fmt(foodYear) + " t, against 1.24 t for canteen and restaurant meals in Li et al. (2015) — the closest like-for-like figure, since both cover roughly nine months on campus. The total stays below the 2.54 and 3.84 t averages in Lecture 1 because showers, study, goods, and waste sit outside this boundary.</li>";
 }
 
 function resetAll() {

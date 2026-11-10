@@ -222,8 +222,9 @@ def s2(prs):
          [{"t": "A semester, not only a total", "font": DISPLAY, "size": 24,
            "color": INK}])
     text(s, M + 1.55, 2.78, 9.3, 1.0,
-         [{"t": "Lecture 1 set 3.84 and 2.54 t CO₂e per student per year side by side. "
-                "They cannot be ranked until the unit and the boundary match.",
+         [{"t": "Lecture 1 set 3.84 and 2.54 t CO₂e per student per year side by side. One "
+                "counts on-campus operations, the other consumption-side spending. They "
+                "cannot be ranked until the unit and the boundary match.",
            "font": UI, "size": 14.5, "color": SOFT}], line_spacing=1.4)
     text(s, M + 1.55, 3.70, 9.3, 0.3,
          [{"t": "Sanity check: two 18-week semesters is about 1.6 t — below both.",
@@ -477,9 +478,58 @@ def s8(prs):
            "color": GREEN}], line_spacing=1.2)
 
 
+# ---------------------------------------------------------------- slide 9
+def s9(prs):
+    s = blank(prs)
+    chrome(s, 9, "REFERENCES", "What these numbers rest on")
+
+    groups = [
+        (1.95, "EMISSION FACTORS", [
+            ("Electricity", "0.5737 kg CO₂/kWh. Ministry of Ecology and Environment and "
+                            "National Bureau of Statistics, Announcement on the 2023 "
+                            "Electricity Carbon Dioxide Emission Factors (2025, No. 47), "
+                            "Shanghai provincial average."),
+            ("High-speed rail", "0.02709 kg CO₂/passenger·km. Tong R., Wei R., Wu J., "
+                                "Mao B., Tian P. (2025). Climate Change Research, 21(1), "
+                                "116–124. China, 2019, operation phase."),
+        ]),
+        (3.55, "BENCHMARK AND FRAMING", [
+            ("Li X., Tan H., Rackes A. (2015).", "Carbon footprint analysis of student "
+             "behavior for a sustainable university campus in China. Journal of Cleaner "
+             "Production, 106, 97–108. Used for the food like-for-like check."),
+            ("Zhu W., Li D., Liu W. (2026).", "From intention to action: Modeling student "
+             "lifestyle carbon emissions and reduction scenarios. Cleaner and Responsible "
+             "Consumption, 21, 100391. Used for the boundary comparison."),
+        ]),
+        (5.28, "ACTIVITY DATA", [
+            ("Shared Virtual SJTU Student profile.", "SDG2410J course materials. Every "
+             "default value on the page comes from it and is unchanged."),
+        ]),
+    ]
+
+    for y, lab, items in groups:
+        label(s, M, y, 3.0, lab)
+        yy = y + 0.22
+        for head, body in items:
+            text(s, M, yy, CW - 0.4, 0.5,
+                 [{"runs": [{"t": head + "  ", "font": UI, "size": 10.5, "bold": True,
+                             "color": INK},
+                            {"t": body, "font": UI, "size": 10.5, "color": SOFT}]}],
+                 line_spacing=1.32)
+            lines = max(1, -(-(len(head) + len(body) + 2) // 142))
+            yy += 0.215 * lines + 0.19
+
+    rule(s, M, 6.05, CW)
+    text(s, M, 6.20, CW, 0.6,
+         [{"t": "Food, metro, ride-hailing, and walking have no adopted source. The page "
+                "keeps them marked unverified, and the food factors are per kilogram of "
+                "food with a portion we assumed.", "font": UI, "size": 11.5,
+           "color": AMBER}], line_spacing=1.3)
+
+
 def main(out="roadshow/Group9_Roadshow_Slides.pptx"):
     prs = deck()
-    for fn in (s1, s2, s3, s4, s5, s6, s7, s8):
+    for fn in (s1, s2, s3, s4, s5, s6, s7, s8, s9):
         fn(prs)
     prs.save(out)
     print("wrote", out, len(prs.slides), "slides")

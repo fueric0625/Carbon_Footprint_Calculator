@@ -168,6 +168,23 @@
   nav button:disabled { opacity: 0.35; cursor: default; }
   :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
+  /* --- references --- */
+  .refs { margin-top: 4vh; display: grid; gap: 3vh; }
+  .refgroup .rl {
+    font: 700 9px/1 var(--ui); letter-spacing: 0.15em;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  .refgroup p {
+    margin: 0 0 8px; color: var(--soft);
+    font-size: clamp(11px, 1vw, 13px); line-height: 1.5;
+  }
+  .refgroup b { color: var(--ink); }
+  .reffoot {
+    margin-top: auto; padding-top: 14px;
+    border-top: 1px solid var(--line);
+    color: var(--amber); font-size: clamp(11px, 1vw, 12.5px);
+  }
+
   /* --- units detail --- */
   .formula-line { margin: 3vh 0 0; font-size: clamp(15px, 1.6vw, 19px); font-weight: 700; }
   .formula-note { margin: 8px 0 0; color: var(--muted); font-size: clamp(12px, 1.1vw, 13px); max-width: 72ch; }
@@ -219,7 +236,7 @@
       <div class="label">NEED 01</div>
       <div>
         <h2>A semester, not only a total</h2>
-        <p>Lecture 1 set 3.84 and 2.54 t CO₂e per student per year side by side. They cannot be ranked until the unit and the boundary match.</p>
+        <p>Lecture 1 set 3.84 and 2.54 t CO₂e per student per year side by side. One counts on-campus operations, the other consumption-side spending. They cannot be ranked until the unit and the boundary match.</p>
         <p class="check">Sanity check: two 18-week semesters is about 1.6 t — below both.</p>
       </div>
     </div>
@@ -389,9 +406,31 @@
   <p class="close">So the headline says reported and names both parts. It is not a compliant CO₂e total.</p>
 </section>
 
+<section class="slide">
+  <p class="kicker">References</p>
+  <h1>What these numbers rest on</h1>
+  <div class="refs">
+    <div class="refgroup">
+      <div class="rl">EMISSION FACTORS</div>
+      <p><b>Electricity</b> 0.5737 kg CO₂/kWh. Ministry of Ecology and Environment and National Bureau of Statistics, Announcement on the 2023 Electricity Carbon Dioxide Emission Factors (2025, No. 47), Shanghai provincial average.</p>
+      <p><b>High-speed rail</b> 0.02709 kg CO₂/passenger·km. Tong R., Wei R., Wu J., Mao B., Tian P. (2025). Climate Change Research, 21(1), 116–124. China, 2019, operation phase.</p>
+    </div>
+    <div class="refgroup">
+      <div class="rl">BENCHMARK AND FRAMING</div>
+      <p><b>Li X., Tan H., Rackes A. (2015).</b> Carbon footprint analysis of student behavior for a sustainable university campus in China. Journal of Cleaner Production, 106, 97–108. Used for the food like-for-like check.</p>
+      <p><b>Zhu W., Li D., Liu W. (2026).</b> From intention to action: Modeling student lifestyle carbon emissions and reduction scenarios. Cleaner and Responsible Consumption, 21, 100391. Used for the boundary comparison.</p>
+    </div>
+    <div class="refgroup">
+      <div class="rl">ACTIVITY DATA</div>
+      <p><b>Shared Virtual SJTU Student profile.</b> SDG2410J course materials. Every default value on the page comes from it and is unchanged.</p>
+    </div>
+  </div>
+  <p class="reffoot">Food, metro, ride-hailing, and walking have no adopted source. The page keeps them marked unverified, and the food factors are per kilogram of food with a portion we assumed.</p>
+</section>
+
 <nav>
   <button type="button" id="prev">Previous</button>
-  <span id="count">1 / 8</span>
+  <span id="count">1 / 9</span>
   <button type="button" id="next">Next</button>
 </nav>
 

@@ -31,7 +31,7 @@ SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 
 
 | 文件 | 作用 |
 |---|---|
-| `Group9_Roadshow_Slides.pptx` | 要上传 Canvas 的幻灯片，八页。第 8 页是单位与气体细节，可略。浅色，Georgia + Segoe UI，没有视频 |
+| `Group9_Roadshow_Slides.pptx` | 要上传 Canvas 的幻灯片，九页。第 8 页是单位与气体细节（可略），第 9 页是出处。浅色，Georgia + Segoe UI，没有视频 |
 | `Group9_Roadshow_Card.pdf` | 一页 A4 手拿卡：三组数字加七条被问到再答。和幻灯片同一套配色 |
 | `build_deck.py` | 生成幻灯片的脚本。改文案改这里，再跑一次 `python roadshow/build_deck.py` |
 | `build_card.py` | 生成手拿卡的脚本，跑完用 LibreOffice 导成 PDF |
@@ -40,7 +40,7 @@ SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 
 | `Group9_Roadshow_Script.md` | 7 分 30 秒讲稿，含默写数字和问答备用答案 |
 | `group9-roadshow.canvas.tsx` | 排练用的路演画布源文件。数字和问答与讲稿一致 |
 
-八页的顺序：标题，两个需求，功能单位，因子和归因，页面对需求的回应，三站演示路线，单位这一次复查，单位与气体的细节页（可略）。第 12 讲融资排放不放上幻灯片。
+九页的顺序：标题，两个需求，功能单位，因子和归因，页面对需求的回应，三站演示路线，单位这一次复查，单位与气体的细节页（可略），出处。第 12 讲融资排放不放上幻灯片。
 
 ## logs
 
