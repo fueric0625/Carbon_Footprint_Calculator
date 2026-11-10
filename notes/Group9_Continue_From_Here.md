@@ -11,8 +11,8 @@ Milestone 3a 和 3b 已做完，3c 个人反思没做。`calculators/Group9_Prot
 | 文件 | 状态 |
 |---|---|
 | `calculators/Group9_Final_Calculator.html` | 3b 最终计算器。单文件，无外部库，浏览器直接打开 |
-| `logs/Group9_M3a_Revisit2_Log.pdf` | 3a 复查日志。Prototype 1，2026-11-09 |
-| `logs/Group9_M3a_AI2_Log.pdf` | 3a AI 日志。工具 Cursor (Grok)，两轮都已接受 |
+| `logs/Group9_M3a_Revisit2_Log.pdf` | 3a 复查日志。Prototype 1，2026-11-09，末尾有 11-10 的追加节 D |
+| `logs/Group9_M3a_AI2_Log.pdf` | 3a AI 日志。Revision 1–2 用 Cursor (Grok)，Revision 3 是 11-10 的份量模型改版 |
 | `roadshow/group9-roadshow.canvas.tsx` | 路演画布源文件，内容和 Cursor 里打开的那份一致 |
 | `roadshow/Group9_Roadshow_Slides.pptx` | 路演幻灯片，上传这一份。九页（第 8 页是单位细节页，可略；第 9 页是出处，不念，指一下即可）。Segoe UI + Georgia，浅色，无视频。一个人讲。第 12 讲融资排放不上幻灯片 |
 | `roadshow/Group9_Roadshow_Script.md` | 7 分 30 秒讲稿，含问答备用答案 |

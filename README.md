@@ -35,6 +35,7 @@ SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 
 | `Group9_Roadshow_Card.pdf` | 一页 A4 手拿卡：三组数字加七条被问到再答。和幻灯片同一套配色 |
 | `build_deck.py` | 生成幻灯片的脚本。改文案改这里，再跑一次 `python roadshow/build_deck.py` |
 | `build_card.py` | 生成手拿卡的脚本，跑完用 LibreOffice 导成 PDF |
+| `build_logs.py` | 生成 3a 两份日志（含 11-10 追加节）的 docx，再导成 logs/ 里的 PDF |
 | `.backup/Group9_Roadshow_Slides_dark.pptx` | 改版前那套深色幻灯片，留着对照 |
 | `Group9_Roadshow_Slides.html` | 同一套七页的浏览器版。教室优先用 pptx |
 | `Group9_Roadshow_Script.md` | 7 分 30 秒讲稿，含默写数字和问答备用答案 |
@@ -48,8 +49,11 @@ SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 
 |---|---|
 | `Group9_M2a_Review_Log.pdf` | Milestone 2a 计算器复查日志 |
 | `Group9_M2a_AI_Log.pdf` | Milestone 2a 的 AI 修改与决定日志 |
-| `Group9_M3a_Revisit2_Log.pdf` | Milestone 3a 复查日志，对象是 Prototype 1，2026-11-09 |
-| `Group9_M3a_AI2_Log.pdf` | Milestone 3a 的 AI 日志。工具是 Cursor（Grok），两轮都已接受 |
+| `Group9_M3a_Revisit2_Log.pdf` | 3a 复查日志，对象是 Prototype 1，2026-11-09；末尾有 D 节「Post-review changes, 2026-11-10」 |
+| `Group9_M3a_AI2_Log.pdf` | 3a AI 日志。Revision 1–2 用 Cursor（Grok），Revision 3 是 11-10 的份量模型改版 |
+| `src/Group9_M3a_Revisit2_Log.docx` | 上面那份复查日志的 Word 源文件，改完用 `roadshow/build_logs.py` 重出 PDF |
+| `src/Group9_M3a_AI2_Log.docx` | 上面那份 AI 日志的 Word 源文件 |
+| `.backup/` | 11-10 之前的两份旧 PDF |
 
 ## notes
 
