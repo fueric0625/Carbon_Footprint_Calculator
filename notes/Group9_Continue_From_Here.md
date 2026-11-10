@@ -14,7 +14,7 @@ Milestone 3a 和 3b 已做完，3c 个人反思没做。`calculators/Group9_Prot
 | `logs/Group9_M3a_Revisit2_Log.pdf` | 3a 复查日志。Prototype 1，2026-11-09 |
 | `logs/Group9_M3a_AI2_Log.pdf` | 3a AI 日志。工具 Cursor (Grok)，两轮都已接受 |
 | `roadshow/group9-roadshow.canvas.tsx` | 路演画布源文件，内容和 Cursor 里打开的那份一致 |
-| `roadshow/Group9_Roadshow_Slides.pptx` | 路演幻灯片，上传这一份。八页（第 8 页是单位细节页，可略）。Segoe UI + Georgia，浅色，无视频。一个人讲。第 12 讲融资排放不上幻灯片 |
+| `roadshow/Group9_Roadshow_Slides.pptx` | 路演幻灯片，上传这一份。九页（第 8 页是单位细节页，可略；第 9 页是出处，不念，指一下即可）。Segoe UI + Georgia，浅色，无视频。一个人讲。第 12 讲融资排放不上幻灯片 |
 | `roadshow/Group9_Roadshow_Script.md` | 7 分 30 秒讲稿，含问答备用答案 |
 | 3c 个人反思 | 不在小组任务里。Canvas 上交，100–150 词，自己的话 |
 
@@ -33,7 +33,7 @@ Milestone 3a 和 3b 已做完，3c 个人反思没做。`calculators/Group9_Prot
 ## 回家先做
 
 1. 用浏览器打开 `calculators/Group9_Final_Calculator.html`，按 `roadshow/Group9_Roadshow_Script.md` 走一遍，不要重新敲李明的默认值。
-2. 打开 `roadshow/Group9_Roadshow_Slides.pptx`。前四页约一分半。第 5 页点一下页面对需求的回应。第 6 页讲完就切到计算器。回到第 7 页只讲单位这一次复查；第 8 页按时间决定讲多细或整页略过。
+2. 打开 `roadshow/Group9_Roadshow_Slides.pptx`。前四页约一分半。第 5 页点一下页面对需求的回应。第 6 页讲完就切到计算器。回到第 7 页只讲单位这一次复查；第 8 页按时间决定讲多细或整页略过；第 9 页出处，不念。
 3. 一个人讲完全程。排练时卡时间。从幻灯片切到网页留几秒。
 4. 教室电脑用最终提交版。文件无外部库，断网也能开。浅色主题在投影上比深色稳；如果字偏小，把浏览器缩放调到 125–150%。
 5. 幻灯片要在截止日期前上传 Canvas。演示顺序课堂随机抽，上限 8 分钟。
