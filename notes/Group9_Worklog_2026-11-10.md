@@ -259,4 +259,51 @@
 - 计算器默认 783.7 未变，两处建议数字已变并在五处文档里同步
 - 仍未 `git commit`
 
+---
+
+## 10. 上午后半段（10:30–12:20）
+
+### 10.1 出处页与论文对照
+
+用户解析了两篇课程阅读（`design/SDG2410J/Readings/两篇学生碳足迹论文解析.md`），据此：
+
+- 幻灯片加第 9 页 References：两个因子的一手来源、两篇论文、共享画像；页脚明写"食物/地铁/网约车没有出处"
+- 第 2 页补一句 operational vs consumption，解释 3.84 和 2.54 为何不能比
+- 计算器合理性校验从"1.6 < 2.54"改成同口径：**食物 1.3 t 对李文 1.24 t**（两学期 36 周 ↔ 李文一学年 9 个月）
+- 问答补"边界更接近哪一篇""占比为何偏高"，淋浴补 0.65 t/年（占李文 18%）的量级
+
+**没采用的**：0.73 kg/餐（食堂运行阶段，不含食物生产）、0.79 kg/kWh（2009 华东电网）、0.068 kg/km（普通铁路）。
+
+### 10.2 3a 两份日志重建
+
+原 PDF 没有 Word 源文件，所以按记录文本重建，并各加一节：
+
+- 复查日志加 D 节「Post-review changes, 2026-11-10」：食物模型、份量成为输入、改版、测试结果
+- AI 日志加 Revision 3：问题 / 指令原文 / 组内决定 / 测试结果；表头日期改 11-09、11-10
+- 11-09 的原文一字未动；Word 源放进 `logs/src/`，旧 PDF 备份在 `logs/.backup/`
+- 生成脚本：`roadshow/build_logs.py`
+
+### 10.3 3c 微调
+
+把 `marked the meal advice illustrative` 换成 `turned the meal weight into a visible input`，145 词。时间线口径：复查产生决定，输入框第二天落地，3a 的 D 节有记录。
+
+### 10.4 讲稿重写成到场版
+
+从"文章"改成"操作手册"：每段 = 时间 · 画面（词数）+ 斜体动作提示 + 引用块念稿；805 词，5:45–6:10；加了砍法/加法、三句卡壳救场话、问答改成"英文要说 + 中文要点"、演示操作清单九步。
+
+### 10.5 产品名：Semester Footprint
+
+原本界面上只有"Li Ming's personal carbon footprint"（核算对象，不是产品名），"calculator" 只出现在标签页里。改成：
+
+| 位置 | 现在 |
+|---|---|
+| 计算器 h1 | Semester Footprint |
+| 计算器副标题 | A fictional student case. Li Ming's footprint, reported for one teaching semester. |
+| 第 1 页 | Semester Footprint + "Li Ming's carbon footprint, for one teaching semester" |
+| 讲稿开场 | "This is Semester Footprint — Li Ming's carbon footprint for one teaching semester." |
+| 数字卡 | Semester Footprint — the numbers, then the answers |
+
+**3b 文件名不能改**，仍是 `Group9_Final_Calculator.html`（作业要求）。数字一个没动。
+
+
 

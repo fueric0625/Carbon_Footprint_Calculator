@@ -41,7 +41,7 @@
 
 *站定，看一眼最后一排，再开口。*
 
-> Good morning. This is Li Ming's carbon footprint for one teaching semester. Li Ming is a fictional second-year student here.
+> Good morning. This is Semester Footprint — Li Ming's carbon footprint for one teaching semester. Li Ming is a fictional second-year student here.
 >
 > One question runs through it: what is counted, what is left out, and which numbers actually have a source.
 

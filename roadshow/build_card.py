@@ -116,7 +116,8 @@ def main(out="roadshow/Group9_Roadshow_Card.pptx"):
     # ---------------------------------------------------------- head
     kicker(s, 0.50, "GROUP 9  ·  SDG2410J  ·  ROADSHOW CARD")
     text(s, M, 0.70, CW, 0.4,
-         [{"t": "The numbers, then the answers", "font": DISPLAY, "size": 20}])
+         [{"t": "Semester Footprint — the numbers, then the answers",
+           "font": DISPLAY, "size": 19}])
     text(s, M, 1.06, CW, 0.2,
          [{"t": "Every figure re-checked in the browser on 10 November 2026. "
                 "Nothing here is new; it is the same file you are about to open.",

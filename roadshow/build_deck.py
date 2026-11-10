@@ -182,13 +182,14 @@ def s1(prs):
     text(s, M, 1.05, 7.0, 0.22,
          [{"t": "GROUP 9  ·  SDG2410J  ·  CARBON ACCOUNTING", "size": 9.5,
            "bold": True, "color": GREEN, "spc": 170}])
-    text(s, M, 1.55, 7.3, 2.6,
-         [{"t": "Li Ming’s personal carbon footprint", "font": DISPLAY,
-           "size": 50, "color": INK}], line_spacing=1.02)
-    text(s, M, 4.12, 7.3, 0.45,
-         [{"t": "One teaching semester", "font": UI, "size": 21, "color": SOFT}])
-    rule(s, M, 4.95, 7.1)
-    text(s, M, 5.15, 7.0, 0.9,
+    text(s, M, 1.62, 7.3, 1.0,
+         [{"t": "Semester Footprint", "font": DISPLAY,
+           "size": 56, "color": INK}], line_spacing=1.02)
+    text(s, M, 2.78, 7.3, 0.5,
+         [{"t": "Li Ming’s carbon footprint, for one teaching semester",
+           "font": UI, "size": 20, "color": SOFT}])
+    rule(s, M, 3.92, 7.1)
+    text(s, M, 4.12, 7.0, 1.4,
          [{"t": "What is counted, what is left out, and which numbers have a source.",
            "font": UI, "size": 15, "color": SOFT}], line_spacing=1.35)
 

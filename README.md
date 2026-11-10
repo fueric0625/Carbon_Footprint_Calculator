@@ -1,4 +1,4 @@
-# 第 9 组 · 个人碳足迹计算器
+# 第 9 组 · Semester Footprint（个人碳足迹计算器）
 
 SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 9 组现在只有一个人。
 
@@ -23,7 +23,7 @@ SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 
 |---|---|
 | `Group9_Prototype0.html` | Milestone 1c。按 Prompt V2 生成的第一版可运行页面，保留不改 |
 | `Group9_Prototype1.html` | 复查用的上一版。最终版相对它只改了学期周数和标题单位。不要再改 |
-| `Group9_Final_Calculator.html` | Milestone 3b，教室里打开的最终计算器。单文件、无外部库、断网能开。2026-11-10 改成浅色主题、字减半，数字一个没动 |
+| `Group9_Final_Calculator.html` | Milestone 3b，教室里打开的最终计算器，产品名 **Semester Footprint**。单文件、无外部库、断网能开。2026-11-10 改成浅色主题、字减半，数字一个没动 |
 
 最终版默认 18 周是 **783.7 kg reported**。改成 16 周是 **699.3 kg**，高铁仍是 880 km。结果页顶部 Reset 回到 18 周。
 

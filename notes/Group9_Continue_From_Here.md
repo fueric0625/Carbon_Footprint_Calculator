@@ -10,7 +10,7 @@ Milestone 3a 和 3b 已做完，3c 个人反思没做。`calculators/Group9_Prot
 
 | 文件 | 状态 |
 |---|---|
-| `calculators/Group9_Final_Calculator.html` | 3b 最终计算器。单文件，无外部库，浏览器直接打开 |
+| `calculators/Group9_Final_Calculator.html` | 3b 最终计算器，产品名 **Semester Footprint**。单文件，无外部库，浏览器直接打开 |
 | `logs/Group9_M3a_Revisit2_Log.pdf` | 3a 复查日志。Prototype 1，2026-11-09，末尾有 11-10 的追加节 D |
 | `logs/Group9_M3a_AI2_Log.pdf` | 3a AI 日志。Revision 1–2 用 Cursor (Grok)，Revision 3 是 11-10 的份量模型改版 |
 | `roadshow/group9-roadshow.canvas.tsx` | 路演画布源文件，内容和 Cursor 里打开的那份一致 |
