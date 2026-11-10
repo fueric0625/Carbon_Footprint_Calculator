@@ -1,152 +1,273 @@
-# 第 9 组路演讲稿
+# 第 9 组 · 路演讲稿（2026-11-10 到场版）
 
-一个人讲完全程。台上用英语。上限 8 分钟，按 7 分 30 秒排。
+一个人讲完全程，台上英语。上限 **8:00**，按 **7:30** 排，留 30 秒缓冲。
+讲稿正文 805 词，按 130–140 词/分钟约 5:45–6:10，剩下 1:20 左右留给点击、停顿和切换。
 
-幻灯片九页。**第 8 页（单位和气体）是细节页，自己决定讲多细或整页略过**：时间够就在第 7 页之后顺着讲 30–40 秒，时间紧就直接跳到收束句，或者留到问答再翻回去。**第 9 页是出处**，最后一句带过（“the sources are on the last page”），不用念。8 分钟上限不因为多了这两页而变。
+---
 
-第 2 到第 5 页只点卡片、各说一两句，不要把幻灯片念完。中间停在 `calculators/Group9_Final_Calculator.html`。不要重填李明的默认值。从幻灯片切到网页留几秒。结果页用顶部的 Reset，矮窗口里步骤底部的 Reset 会被预览条挡住。
+## 一、上台前五分钟
 
-幻灯片是 `roadshow/Group9_Roadshow_Slides.pptx`。
+1. 浏览器打开 `calculators/Group9_Final_Calculator.html`，**缩放调到 125–150%**，停在 Transport 页，不要往下滚。
+2. 幻灯片打到第 1 页。除了 PowerPoint 和浏览器，别的窗口全关。
+3. 数字卡放手边（`Group9_Roadshow_Card.pdf`），**只在你卡住的时候看**。
+4. 水瓶放手边但别喝太多；讲话前把"783.7 / 96.1 / 687.6"小声念一遍。
+5. **不要重敲李明的默认值。** 全程只改一个数字（18 → 16），然后 Reset。
 
-## 时间
+---
 
-| 时间 | 画面 | 做什么 |
+## 二、时间轴
+
+| 时间 | 画面 | 这一段的唯一任务 |
 |---|---|---|
-| 0:00–0:15 | 第 1 页 | 标题 |
-| 0:15–0:50 | 第 2 页 | 两个需求 |
-| 0:50–1:15 | 第 3 页 | 功能单位 |
-| 1:15–1:45 | 第 4 页 | 因子和归因 |
-| 1:45–2:05 | 第 5–6 页 | 点三栏，报三站，切到网页 |
-| 2:05–6:15 | 计算器 | 默认值、改一次、读结果 |
-| 6:15–7:30 | 第 7 页 | 只讲单位这一次复查 |
+| 0:00–0:20 | 第 1 页 | 说出题目和一句话结论 |
+| 0:20–1:05 | 第 2 页 | **客户需求**：他要什么，我们怎么回答 |
+| 1:05–1:30 | 第 3 页 | 功能单位：一个学期 |
+| 1:30–1:55 | 第 4 页 | 因子要匹配；这是归因不是后果 |
+| 1:55–2:15 | 第 5–6 页 | 三个卖点 + 三站路线，然后切网页 |
+| 2:15–3:05 | 计算器 · Transport | 指横幅，点三处，不改数字 |
+| 3:05–4:05 | 计算器 · Energy | **只改一次**：18 → 16，Reset |
+| 4:05–5:35 | 计算器 · 结果页 | 读总数、两段单位、两类建议、合理性 |
+| 5:35–5:55 | 结果页下半 | 一句排除项 |
+| 5:55–7:10 | 第 7 页 | **复查**：问题 → 修改 → 效果 → 限制 |
+| 7:10–7:30 | 第 7 页 / 第 9 页 | 收束句，指出处，停 |
 
-## 0:00–0:15 标题
+---
 
-Li Ming’s personal carbon footprint, for one teaching semester. I will show what is counted, what is left out, and which numbers have a source.
+## 三、逐段讲稿
 
-## 0:15–0:50 为什么
+> 引用的段落是**要念出来的原文**。斜体是我给你的动作提示，不用出声。
 
-点第一张卡。
+### 0:00–0:20 · 第 1 页（约 40 词）
 
-Lecture 1 put two student averages side by side: 3.84 and 2.54 tonnes CO₂e per student per year. They cannot be ranked until the unit and the boundary match. Li Ming’s profile mixes weeks, months, 30 days, and a semester. He needs one period that shows what is counted, what is left out, and which number he can change.
+*站定，看一眼最后一排，再开口。*
 
-点第二张卡。
+> Good morning. This is Li Ming's carbon footprint for one teaching semester. Li Ming is a fictional second-year student here.
+>
+> One question runs through it: what is counted, what is left out, and which numbers actually have a source.
 
-He also needs a comparison he is allowed to trust. Electricity and high-speed rail have published CO₂ factors. Food, metro, and ride-hailing do not. Those two kinds of number stay apart.
+*停一秒再翻页。这句"one question"是全场的主线，后面每一段都回扣它。*
 
-## 0:50–1:15 算什么
+### 0:20–1:05 · 第 2 页（约 85 词）
 
-A product result is reported per functional unit, not as the weight of the food. The BMW vehicle study uses 200,000 kilometres. This profile never says how many semesters make a year, so this file does not multiply by 52. The result is one teaching semester.
+*先指第一张卡，再指第二张；不要念卡片上的字。*
 
-Each counted row is an activity amount times a factor. Weeks, months, and the last 30 days are converted onto that semester before they are added.
+> Lecture one put two student averages side by side: 3.84 and 2.54 tonnes per student per year. One counts on-campus operations. The other counts consumption-side spending. They are not comparable until the unit and the boundary match.
+>
+> So Li Ming needs two things. A semester result he can act on — and a comparison he is allowed to trust. Electricity and high-speed rail have published CO₂ factors. Food, metro and ride-hailing do not. Those two kinds of number stay apart.
 
-## 1:15–1:45 怎么算
+*"stay apart" 说完停半秒，这是产品设计的核心，值得一个停顿。*
 
-A factor has to match the place, the year, and the technology. Electricity is Shanghai, 2023, 0.5737 kilograms CO₂ per kilowatt-hour. The class sheet’s 0.4701 is Shanghai 2024, and it is CO₂e. Rail is China, 2019, operation phase, 0.02709 kilograms CO₂ per passenger-kilometre. The published gas stays CO₂.
+### 1:05–1:30 · 第 3 页（约 50 词）
 
-This is an attributional account: emissions assigned to one student inside a stated boundary. Replacing half the beef meals is not a consequential assessment. There is no baseline for what the food system would otherwise have done.
+> A product result is reported per functional unit, not as the weight of what was consumed. The BMW vehicle study uses 200,000 kilometres. This profile never says how many semesters make a year, so nothing here is multiplied by 52.
+>
+> The unit is one teaching semester.
 
-## 1:45–2:05 页面和路线
+*"one teaching semester" 是这一页的落点，放慢。*
 
-On the page, three things. The shared facts stay filled in. Eighteen weeks is an assumption he can edit. Dorm electricity is generated outside the room, and only his quarter is assigned to him. Showers, parcels, clothing, and waste stay visible and stay out of the total.
+### 1:30–1:55 · 第 4 页（约 70 词）
 
-Then three stops. I will not retype the defaults. I will change one number. Then I will read the result.
+> A factor has to match the place, the year and the technology. Electricity is Shanghai, 2023: 0.5737 kilograms CO₂ per kilowatt-hour. The class sheet's 0.4701 is Shanghai 2024, and it is CO₂e. Rail is China, 2019, operation phase: 0.02709.
+>
+> And this is an attributional account. Replacing half the beef meals is not a consequential assessment — there is no baseline for what the food system would otherwise have done.
 
-切到 `calculators/Group9_Final_Calculator.html`。
+*这两个数只念一次，别回头解释。学生问再说（问答里有）。*
 
-## 2:05–3:00 交通，用默认值
+### 1:55–2:15 · 第 5–6 页（约 40 词），然后切网页
 
-先指横幅。
+*第 5 页点三栏，第 6 页只报三站，不要逐条念。*
 
-Electricity and high-speed rail use published CO₂ factors. The other factors are not yet verified.
+> Three things the page does. The shared facts stay filled in. The boundary stays visible. The total names its units.
+>
+> Three stops: transport, one change, then the result. I will not retype anything.
 
-再点三处，不要改数字。
+*切到浏览器。留三秒让画面出来，别急着说话。*
 
-Metro is weekly trips times one-way kilometres. Ride-hailing is monthly, he travels alone, and the trips are not divided by passengers. High-speed rail is two round trips, 220 kilometres each way, already per semester, so it is not multiplied by the weeks. Walking stays in this step. Its use phase is counted as zero — that is a boundary choice, not an unverified factor.
+### 2:15–3:05 · 计算器 · Transport（约 80 词）
 
-## 3:00–4:15 只改一次
+*先指横幅，停一拍。*
 
-打开 Energy。
+> This banner is the rule for the whole page. Electricity and rail have published factors. Everything else is unverified.
 
-Eighteen weeks is not a fact from the profile. One hundred and twenty kilowatt-hours is the whole room over the last 30 days. Li Ming is one quarter of four people. Showers have a count and a duration, but no energy type and no amount, so they stay out of the total.
+*指地铁、网约车、高铁三处，各说一句，手不要停在一个地方。*
 
-把 18 改成 16。打开结果。
+> Metro is weekly trips times one-way kilometres. Ride-hailing is monthly, he travels alone, and it is not divided by passengers. Rail is two round trips of 220 kilometres — already per semester, so the weeks do not touch it.
+>
+> Walking stays in, with use-phase emissions at zero. That is a boundary choice, not an unverified factor.
 
-The total is now 699.3 kilograms reported. Metro falls to 480 kilometres. Beef or lamb falls from 54 meals to 48. Rail is still 880 kilometres, because it was already per semester.
+### 3:05–4:05 · 计算器 · Energy（约 110 词）
 
-按结果页顶部的 Reset。
+*点 Energy。*
 
-Reset returns 18 weeks and 783.7 kilograms.
+> Eighteen weeks is not a fact from the profile. It is an assumption he can change.
+>
+> One hundred and twenty kilowatt-hours is the whole room for the last thirty days. Li Ming is one quarter of four people, so his share is 126 kilowatt-hours. Showers have a count and a duration, but no energy type and no amount, so they stay out of the total.
+>
+> I will change one number. Eighteen becomes sixteen.
 
-## 4:15–5:50 读结果
+*改数字，点 View results，停一拍再念。*
 
-标题指出来。
+> The total is now 699.3 kilograms. Metro falls to 480 kilometres. Beef falls from 54 meals to 48. Rail is still 880, because it was already per semester.
 
-783.7 kilograms reported per teaching semester. This is not a complete CO₂e total.
+*按结果页顶部的 Reset。*
 
-Sourced CO₂: electricity 72.3 kilograms plus high-speed rail 23.8 kilograms, together 96.1 kilograms. Unverified CO₂e: 687.6 kilograms.
+> Reset returns both the weeks and the total.
 
-By category: food 648, electricity 72.3, transport 63.4.
+### 4:05–5:35 · 结果页（约 160 词）
 
-建议只读两条。
+*指标题的数字。*
 
-Beef or lamb is currently 324 kilograms: 54 meals at 100 grams each, times a provisional 60 kilograms CO₂e per kilogram of food. Replacing half of these meals with plant-based meals of the same portion lowers this item by about 159.3 kilograms, and the total falls to about 624.4. The portion size is our assumption and the factor is unverified, so the change is illustrative.
+> 783.7 kilograms reported, per teaching semester. This is not a complete CO₂e total, and the page says so.
 
-Electricity is different. The factor has a source, so the 14.5 kilograms is arithmetic on a published number. The 20 percent is still a scenario — but this one does not rest on an unverified factor.
+*指下面两栏。*
 
-One check on plausibility. Two 18-week semesters is about 1.6 tonnes. Our food line alone is 1.3 tonnes — and the Tongji study of 2015 puts canteen and restaurant meals at 1.24 tonnes per student a year, over about the same nine months. The total stays below 2.54 because showers, study, goods and waste are outside this boundary.
+> Sourced CO₂ is 96.1 kilograms: electricity 72.3, rail 23.8. Unverified CO₂e is 687.6. By category: food 648, electricity 72, transport 63.
 
-## 5:50–6:15 排除项一句
+*滚到建议。这里只读两条，第三条跳过。*
 
-Showers, parcels, clothing, and waste are on the page under “Not included.” The profile has a count, but no energy, mass, material, or treatment path. About two takeaway meals a week are already inside the 21 main meals. They are not added again, and the packaging is not counted separately.
+> Two suggestions. Beef: 54 meals at 100 grams, times a provisional 60 kilograms per kilogram of food. Halving them saves about 159, and the total falls to about 624. The portion is mine and the factor is unverified — so that comparison is illustrative.
+>
+> Electricity is different. The factor has a source, so the 14.5 kilograms is arithmetic on a published number. The 20 percent is still a scenario, but it does not rest on an unverified factor.
 
-切回第 7 页。
+*停一下再讲合理性，这是全场最容易被记住的一句。*
 
-## 6:15–7:30 所以呢，只讲单位
+> One check on plausibility. Two semesters is about 1.6 tonnes. Our food alone is 1.3 tonnes — against 1.24 in the Tongji study of 2015, over about the same nine months. We sit lower because showers, study, goods and waste are outside this boundary.
 
-Prototype 1 called the headline kilograms CO₂e. Carbon, CO₂, and CO₂e cannot be mixed. The electricity factor and the rail factor are published as CO₂. The meal factors are unverified per kilogram, and the portions are our own assumption. At the default, beef or lamb is about 324 kilograms, so it would fill any ranking.
+### 5:35–5:55 · 结果页下半（约 50 词）
 
-The final page says kilograms reported per teaching semester. Sourced CO₂ and unverified CO₂e are shown apart. The meal suggestions say illustrative.
+*滚到 Not included，指一下就走。*
 
-The effect is that 324 kilograms cannot be treated as a verified ranking.
+> Showers, parcels, clothing and waste are on the page and out of the total. The profile gives a count, not an energy type, a mass, or a treatment path.
+>
+> Two takeaway meals a week are already inside the 21 main meals, so they are not added again.
 
-What is still open: three categories — food, metro, and ride-hailing — still have no published source. In the factor table that is six rows, because food splits into four meal types.
+### 5:55–7:10 · 第 7 页（约 120 词）
 
-收束，指最后一行。
+*切回第 7 页。这是唯一一次"讲过去发生了什么"，语速可以慢下来。*
 
-He can see, in one semester, which numbers have a source, and which numbers still cannot be used to rank.
+> One revision. Prototype 1 called the headline kilograms CO₂e. Carbon, CO₂ and CO₂e cannot be mixed — and both of my published factors are CO₂.
+>
+> The decision: keep one reported total, and name both parts. Sourced CO₂ on one line, unverified CO₂e on the other. Any advice resting on an unverified factor says illustrative.
+>
+> The effect: 324 kilograms can no longer pass as a ranking.
+>
+> What is still open: food, metro and ride-hailing have no published source. In the factor table that is six rows, because food splits into four meal types. That is disclosure, not a fix.
 
-## 默写数字（18 周默认）
+*这里加一句"学到了什么"，评分表的反思那一栏要的正是这句。*
 
-- 合计 783.7 kg reported。来源 CO₂ 96.1 kg，未核实 CO₂e 687.6 kg。
-- 交通 63.4 kg：步行 360 km / 0 kg；地铁 540 km / 21.6 kg；网约车 90 km / 18.0 kg；高铁 880 km / 23.8 kg。
-- 电力 72.3 kg：房间 120 kWh/30 天，126 天约 504 kWh，李明 126 kWh。因子 0.5737 kg CO₂/kWh，上海 2023，2025 年第 47 号公告。
-- 高铁因子 0.02709 kg CO₂/人·km，中国 2019 运营阶段。
-- 食物 648 kg（每顿份量是我们假设的）：牛肉或羊肉 54 顿 × 100 g / 324 kg；其他肉 144 顿 × 250 g / 216 kg；鱼蛋奶豆 90 顿 × 400 g / 72 kg；植物性 90 顿 × 400 g / 36 kg。食物总重 113.4 kg。
-- 前三条建议：牛肉示意 −159.3 → 约 624.4；其他肉示意 −90.0 → 约 693.7；电力 −14.5 kg CO₂ → 约 769.3。台上只读牛肉和电力。
-- 16 周：699.3 kg，地铁 480 km，牛肉 48 顿，用电按 112 天，高铁仍 880 km。
-- 合理性：两个 18 周学期约 1.6 t/年，低于 2.54 和 3.84。
+> The lesson is not that the number was wrong. It is that a number without a stated unit and a stated source cannot be ranked against anything.
 
-## 被问到再答
+### 7:10–7:30 · 收束
 
-**为什么是 0.5737，不是 0.4701？** 讲义示例是上海 2024 年电网因子，0.4701 kg CO₂e/kWh。这里用 2025 年第 47 号公告里的上海 2023 年省级平均，0.5737 kg CO₂/kWh。原文是 CO₂，页面没有改写成 CO₂e。
+*回第 7 页最后一行，或直接指屏幕上的结论句。*
 
-**为什么不乘 52？** 画像混用周、月、30 天和教学学期，也没写一年几个学期。结果期是一个教学学期。18 周是假设，1 个月按 4 周。高铁和衣物本来就是每学期。我们的高铁是 880 km/学期。
+> He can see, in one semester, which numbers have a source, and which numbers still cannot be used to rank.
 
-**食物为什么这么大？** 每周 3 顿 × 18 周 = 54 顿，乘我们假设的每顿 100 g，得到 5.4 kg 食物，再乘临时的 60 kg CO₂e/kg，是 324 kg。画像只给顿数，份量是我们加的假设；因子也还没有出处。所以这个排序是示意，不是结论。
+*停两秒。如果还剩时间，指第 9 页：*
 
-**为什么比讲义的 2.54 和 3.84 低？** 两个 18 周学期约 1.6 t。低的三处原因：洗澡、购物、垃圾在边界外；一年按 36 周算，不是 52 周；食物用的是临时的每公斤因子，份量还得我们自己假设。所以这是一份偏低的不完整账，不是算错了。
+> The sources are on the last page.
 
-**你的边界更接近哪一篇？** 食物这侧接近朱文（它把食物生产算进来，我们用每公斤食物因子）；电力这侧接近李文（只算宿舍电表）。两边都比我们宽，所以我们的数更低。
+*不要再补话，不要"that's all, thanks"之外加东西。*
 
-**食物占比为什么比两篇都高？** 分母不同。李文餐饮占 34%、朱文食物占 47%，这 13 个百分点也是同一个原因。我们的分母只有食物、电力、交通三项，所以单看占比会偏高。
+---
 
-**有出处的两项到底是 CO₂ 还是 CO₂e？** 都是 CO₂。补上 CH₄ 和 N₂O 只会更高，所以 96.1 偏在低的一侧。
+## 四、卡壳时说的三句话
 
-**为什么不算洗澡和垃圾？** 只有次数，没有能源、质量或处理路径。记录留在页面上，不进总数。
+忘了就挑一句，说完立刻回到下一页，不要解释"我刚才卡住了"。
 
-**120 kWh 是李明自己的吗？** 不是。那是整间房最近 30 天。他占四分之一，再按学期天数放大。
+1. **被问到没想到的**：*"That is outside this boundary — and the page lists it under Not included."*
+2. **被质疑数字**：*"That number is provisional, and the page marks it unverified. I would not rank with it."*
+3. **完全不会**：*"I do not have that verified. The honest answer is that we chose this and here is the trade-off."*
 
-**电动车是不是一定更低？** 只在被问到时用宝马的材料，它不是这个计算器的输入。iX5 交付 18.1 t CO₂e，柴油 X5 是 11.7 t。200,000 km、欧洲电力结构下，iX5 全生命周期 31.1 t，X5 是 58.3 t。可再生电力把 iX5 使用阶段从 12.1 t 降到 0.8 t。可再生不是 0，因为发电设施的排放还在。功能单位也不同：宝马用 200,000 km，我们用一个教学学期。
+---
 
-融资排放不要主动讲。
+## 五、时间调整
+
+**落后了（7:30 时还没到第 7 页）**，按这个顺序砍：
+
+1. 第 8 页（单位细节）整页不用，直接跳过。
+2. 5:35–5:55 的排除项压成一句："Showers, parcels, clothing and waste stay out — no energy type, no mass, no pathway."
+3. 4:05–5:35 的"第二条建议（电力）"可以只念第一句。
+4. 第 3 页只念最后一句 "The unit is one teaching semester."
+
+**提前了（7:00 就到第 7 页）**，按这个顺序加：
+
+1. 第 8 页讲 35 秒：两个来源都是 CO₂，补上其他气体只会更高，所以 96.1 偏在低的一侧。
+2. 第 2 页补一句："A comparison is only as good as its weakest factor."
+3. 讲一句朱文的发现：知道不等于做到，所以建议必须落到默认选项和设施上，而不是宣传。
+
+---
+
+## 六、被问到再答
+
+英文是**要说的**，中文是要点。完整版也印在数字卡上。
+
+**Why 0.5737 and not the class sheet's 0.4701?**
+> The class sheet uses Shanghai 2024 and it is CO₂e. Mine is the 2023 Shanghai provincial average from the 2025 No. 47 announcement, and that source reports CO₂. Both are defensible — mine is the one I can cite to the primary source.
+（年份和单位都不同；我们引一手公告。）
+
+**Why not multiply by 52?**
+> The profile mixes weeks, months, 30 days and semesters, and never says how many semesters make a year. One month is four weeks. Rail and clothing are already per semester.
+（画像没给"一年几个学期"，乘 52 就是编。）
+
+**Why is food so large?**
+> 54 beef meals, at an assumed 100 grams each, times a provisional 60 kilograms per kilogram. The portion is ours; the factor has no source. That ranking is illustrative.
+（份量和因子都不是事实。）
+
+**Why is your figure below 2.54 and 3.84?**
+> Two semesters is about 1.6 tonnes. Our food alone is 1.3 tonnes, against 1.24 in the Tongji study — about the same nine months. We are lower because showers, study, goods and waste are outside the boundary.
+（不是算错，是边界窄。）
+
+**Which paper is your boundary closer to?**
+> Zhu's on food, because our factors are per kilogram of food. Li's on electricity, because we count only the room meter. We sit between them, and lower.
+（食物像朱文，电力像李文。）
+
+**Why is your food share higher than both papers?**
+> Because the denominator is narrower. Their 34 and 47 per cent differ from each other for exactly the same reason.
+（占比不能跨边界比。）
+
+**Are the sourced rows CO₂ or CO₂e?**
+> CO₂. Adding the other combustion gases would raise them, so 96.1 sits on the low side.
+（偏低的一侧。）
+
+**Why leave out showers and waste?**
+> The profile gives counts, not energy, mass, or a treatment pathway. Li et al. put showers at 0.65 tonnes a year — 18 per cent of their total — so the gap is material, not cosmetic.
+（缺口是实质的，只是补不诚实地补不了。）
+
+**Is 120 kWh Li Ming's own use?**
+> No. It is the whole room over 30 days. He is one quarter of four, scaled to the semester.
+
+**Is a battery car always lower?**
+> Only if asked. iX5 production is 18.1 tonnes against 11.7 for the diesel X5; over 200,000 kilometres on the European mix, 31.1 against 58.3. It is not an input to this calculator.
+
+**融资排放不要主动讲。**
+
+---
+
+## 七、默写数字（18 周默认）
+
+- 合计 **783.7 kg reported**。来源 CO₂ **96.1**（电 72.3 + 铁 23.8），未核实 CO₂e **687.6**。
+- 交通 63.4：步行 360 km / 0；地铁 540 / 21.6；网约车 90 / 18.0；高铁 880 / 23.8。
+- 电力 72.3：房间 120 kWh/30 天 → 126 天 504 kWh → 李明 126 kWh × 0.5737。
+- 食物 648：牛肉 54 × 100 g / 324；其他肉 144 × 250 g / 216；鱼蛋奶豆 90 × 400 g / 72；植物性 90 × 400 g / 36。食物总重 113.4 kg。
+- 建议：牛肉 **−159.3 → 624.4**；其他肉 −90.0 → 693.7；电力 **−14.5 → 769.3**。台上只读牛肉和电力。
+- 16 周：**699.3**，地铁 480，牛肉 48 顿，用电 112 天，高铁仍 880。
+- 合理性：两学期约 **1.6 t**；食物 1.3 t 对李文 1.24 t。
+
+---
+
+## 八、演示操作清单
+
+| 顺序 | 动作 | 说什么 | 别说 |
+|---|---|---|---|
+| 1 | 停在 Transport，指横幅 | "This banner is the rule for the whole page." | 不要念全部输入项 |
+| 2 | 指地铁 → 网约车 → 高铁 | 各一句 | 不要读数字 |
+| 3 | 点 Energy | "Eighteen weeks is not a fact." | 不要解释每月几周两次 |
+| 4 | 18 → 16，View results | "The total is now 699.3." | 不要重新算给观众听 |
+| 5 | 读数、两栏、三条分类 | 见 4:05 段 | 不要滚太快 |
+| 6 | 读两条建议 | 牛肉读出 illustrative | 不要读第三条 |
+| 7 | 补合理性一句 | "One check on plausibility." | 不要展开 |
+| 8 | 按顶部 Reset | "Reset returns both." | 不要点底部那个 |
+| 9 | 切回第 7 页 | 讲复查 | 不要翻回第 2 页 |
+
+**红线**：8 分钟到点时，宁可停在"the sources are on the last page"，也不要为了讲完第 8 页而超时。
