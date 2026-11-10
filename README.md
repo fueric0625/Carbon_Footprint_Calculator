@@ -2,7 +2,7 @@
 
 SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 9 组现在只有一个人。
 
-上台用四样东西：`roadshow/Group9_Roadshow_Slides.pptx`、`roadshow/Group9_Roadshow_Script.md`、`calculators/Group9_Final_Calculator.html`，外加手拿的一页 `roadshow/Group9_Roadshow_Card.pdf`。幻灯片讲约两分钟，中间停在计算器上，最后回到幻灯片只讲单位。上限 8 分钟。
+上台用四样东西：`roadshow/Group9_Roadshow_Slides.pptx`、`roadshow/Group9_Roadshow_Script.md`、`calculators/Group9_Final_Calculator.html`，外加手拿的一页 `roadshow/Group9_Roadshow_Card.pdf`，iPad 上翻 `roadshow/Group9_Script_Cards.pdf`（17 页，一页一段）。幻灯片讲约两分钟，中间停在计算器上，最后回到幻灯片只讲单位。上限 8 分钟。
 
 所有作业都还没交，已向老师申请晚交。
 
@@ -39,6 +39,8 @@ SDG2410J Carbon Accounting，2026 秋。核算对象是虚拟学生李明。第 
 | `.backup/Group9_Roadshow_Slides_dark.pptx` | 改版前那套深色幻灯片，留着对照 |
 | `Group9_Roadshow_Slides.html` | 同一套七页的浏览器版。教室优先用 pptx |
 | `Group9_Roadshow_Script.md` | 7 分 30 秒讲稿，含默写数字和问答备用答案 |
+| `Group9_Script_Cards.pdf` | 17 页讲稿卡，一页一段，上台带 iPad 翻。含时间轴、应急页、问答两页 |
+| `Group9_Script_Cards.html` | 上面那份卡的源文件，改完用 Edge 的 `--print-to-pdf` 重出 |
 | `group9-roadshow.canvas.tsx` | 排练用的路演画布源文件。数字和问答与讲稿一致 |
 
 九页的顺序：标题，两个需求，功能单位，因子和归因，页面对需求的回应，三站演示路线，单位这一次复查，单位与气体的细节页（可略），出处。第 12 讲融资排放不放上幻灯片。
