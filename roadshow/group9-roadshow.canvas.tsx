@@ -37,14 +37,15 @@ export default function Group9Roadshow() {
 
       <Callout tone="warning" title="Say this before anyone asks">
         Food, metro, and ride-hailing factors are still marked “not yet
-        verified.” Beef or lamb is 324 kg only because the factor is 6 kg per
-        meal and the profile gives no meal weight. The comparison is
-        illustrative. Do not present it as a verified ranking.
+        verified.” Beef or lamb is 324 kg only because a 100 g portion and a
+        provisional 60 kg CO2e per kg of food are both ours: the profile gives
+        meal counts, not weights. The comparison is illustrative. Do not
+        present it as a verified ranking.
       </Callout>
 
       <H2>Seven and a half minutes</H2>
       <Text tone="secondary">
-        Three speakers. The calculator page carries the middle five minutes.
+        One speaker. The calculator page carries the middle five minutes.
         Slides only frame the opening and the one revision.
       </Text>
       <Table
@@ -84,7 +85,7 @@ export default function Group9Roadshow() {
           [
             "6:00–7:30",
             "One revision",
-            "Prototype 1 called the headline kg CO2e. Electricity and rail are sourced CO2; the food factors are unverified per meal. The final page splits the units and marks those suggestions illustrative. Remaining limit: three factors still have no source.",
+            "Prototype 1 called the headline kg CO2e. Electricity and rail are sourced CO2; the food factors are unverified per meal. The final page splits the units and marks those suggestions illustrative. Remaining limit: three categories — six table rows — still have no source.",
             "Reflection, 20",
           ],
         ]}
@@ -142,7 +143,7 @@ export default function Group9Roadshow() {
           ],
           [
             "Why is food most of the total?",
-            "The per-meal factors are unverified and have no meal weight. Three beef or lamb meals a week become 54 meals and 324 kg. That ranking is illustrative.",
+            "The per-kilogram food factors are unverified and the portion sizes are our own assumption. Three beef or lamb meals a week become 54 meals at 100 g and 324 kg. That ranking is illustrative.",
           ],
           [
             "Why leave out showers and waste?",
@@ -163,7 +164,7 @@ export default function Group9Roadshow() {
       <Row gap={8} align="center">
         <Pill tone="warning" active>Credibility risk</Pill>
         <Text tone="secondary">
-          The Revisit 1 sheet says every factor should have a source before the final calculator. Three still do not. Disclosure is the current defense.
+          The Revisit 1 sheet says every factor should have a source before the final calculator. Three categories still do not — six rows in the factor table. Disclosure is the current defense.
         </Text>
       </Row>
     </Stack>

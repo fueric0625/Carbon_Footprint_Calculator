@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group 9 · Roadshow slides</title>
+<style>
+  :root {
+    --paper: #fbfbf8;
+    --ink: #131a17;
+    --soft: #46524c;
+    --muted: #6e7a73;
+    --line: #e1e4dd;
+    --green: #1b6b4f;
+    --amber: #a9642b;
+    --amber-soft: #faf3ea;
+    --ui: "Segoe UI", system-ui, sans-serif;
+    --display: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--paper); color: var(--ink); }
+  body { font: 16px/1.5 var(--ui); overflow: hidden; }
+
+  .slide {
+    display: none;
+    height: 100%;
+    padding: 54px 72px 76px;
+  }
+  .slide.active { display: flex; flex-direction: column; }
+
+  .kicker {
+    margin: 0;
+    font: 700 10px/1 var(--ui);
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--green);
+  }
+  h1 {
+    margin: 12px 0 0;
+    font: 400 clamp(28px, 3.4vw, 46px)/1.06 var(--display);
+    letter-spacing: -0.01em;
+  }
+  .lede { margin: 14px 0 0; color: var(--soft); font-size: clamp(14px, 1.3vw, 17px); }
+  .footline {
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    color: var(--soft);
+    font-size: clamp(12px, 1.1vw, 14px);
+  }
+
+  /* --- title --- */
+  .title-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 5vw;
+    align-items: center;
+    height: 100%;
+  }
+  .title-grid h1 { font-size: clamp(34px, 4.4vw, 62px); }
+  .subline { margin: 26px 0 0; font-size: clamp(16px, 1.7vw, 22px); color: var(--soft); }
+  .rule { height: 1px; background: var(--line); margin: 30px 0 16px; }
+  .plate > div { padding: 16px 0; border-top: 1px solid var(--line); }
+  .plate > div:last-child { border-bottom: 1px solid var(--line); }
+  .plate b { display: block; font-size: clamp(20px, 2.1vw, 28px); letter-spacing: -0.01em; }
+  .plate span { color: var(--muted); font-size: clamp(11px, 1vw, 13px); }
+
+  /* --- need rows --- */
+  .needs { margin-top: 5vh; }
+  .need {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 22px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .need .label { font: 700 9px/1.6 var(--ui); letter-spacing: 0.15em; color: var(--green); }
+  .need h2 { margin: 0; font: 400 clamp(20px, 2.1vw, 28px)/1.15 var(--display); }
+  .need p { margin: 10px 0 0; color: var(--soft); font-size: clamp(13px, 1.2vw, 15px); max-width: 52ch; }
+  .check { margin: 8px 0 0; color: var(--green); font-size: 12px; font-weight: 600; }
+
+  /* --- formula --- */
+  .formula {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1.25fr;
+    gap: 14px;
+    align-items: start;
+    margin-top: 6vh;
+  }
+  .fblock { border-top: 1px solid var(--line); padding-top: 12px; }
+  .fblock.result { border-top: 2px solid var(--green); }
+  .fblock .fl { font: 700 9px/1 var(--ui); letter-spacing: 0.15em; color: var(--muted); }
+  .fblock.result .fl { color: var(--green); }
+  .fblock .fv { margin-top: 8px; font-size: clamp(15px, 1.5vw, 19px); font-weight: 700; }
+  .fblock .fs { margin-top: 6px; color: var(--muted); font-size: 12px; }
+  .op { color: var(--muted); font-size: 20px; padding-top: 20px; }
+  .notes2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 7vh;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--soft);
+    font-size: clamp(13px, 1.15vw, 15px);
+  }
+
+  /* --- factors + callout --- */
+  .split4 { display: grid; grid-template-columns: 1.15fr 1fr; gap: 4vw; margin-top: 4vh; }
+  .split4 h2 { margin: 0 0 6px; font: 400 clamp(18px, 1.9vw, 24px)/1.15 var(--display); }
+  .spec { padding: 14px 0 12px; border-top: 1px solid var(--line); }
+  .spec .sl { font: 700 9px/1 var(--ui); letter-spacing: 0.15em; color: var(--muted); }
+  .spec .sv { margin-top: 7px; font-size: clamp(15px, 1.5vw, 18px); font-weight: 700; }
+  .spec .ss { margin-top: 5px; color: var(--muted); font-size: 12px; }
+  .small { margin-top: 14px; color: var(--muted); font-size: 12px; max-width: 46ch; }
+  .callout {
+    background: var(--amber-soft);
+    border-left: 2px solid var(--amber);
+    padding: 24px 26px;
+    align-self: start;
+  }
+  .callout h2 { color: var(--amber); }
+  .callout p { margin: 12px 0 0; color: var(--soft); font-size: clamp(12.5px, 1.15vw, 14px); }
+
+  /* --- three columns --- */
+  .cols3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 6vh; }
+  .col { border-top: 1px solid var(--line); padding-top: 14px; }
+  .col .num { font: 700 10px/1 var(--ui); letter-spacing: 0.15em; color: var(--green); }
+  .col h2 { margin: 16px 0 0; font: 400 clamp(17px, 1.8vw, 23px)/1.15 var(--display); }
+  .col p { margin: 16px 0 0; color: var(--soft); font-size: clamp(12.5px, 1.15vw, 14.5px); }
+
+  /* --- stops --- */
+  .stops { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 5vh; }
+  .stop .big { font: 400 clamp(30px, 3vw, 40px)/1 var(--display); color: var(--green); }
+  .stop .st { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .stop h2 { margin: 0; font: 400 clamp(17px, 1.7vw, 21px)/1.2 var(--display); }
+  .stop p { margin: 12px 0 0; color: var(--soft); font-size: clamp(12.5px, 1.1vw, 14px); }
+
+  /* --- revision --- */
+  .quad { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; margin-top: 4vh; }
+  .quad > div { padding: 12px 0 18px; border-top: 1px solid var(--line); }
+  .quad .ql { font: 700 9px/1 var(--ui); letter-spacing: 0.15em; }
+  .quad .qh { margin-top: 10px; font: 400 clamp(16px, 1.6vw, 20px)/1.2 var(--display); }
+  .quad .qb { margin-top: 8px; color: var(--soft); font-size: 12.5px; }
+  .close {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font: 400 clamp(16px, 1.7vw, 21px)/1.25 var(--display);
+    color: var(--green);
+  }
+  .issue { color: var(--muted); }
+  .change { color: var(--green); }
+  .still { color: var(--amber); }
+
+  nav {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 72px 14px;
+    color: var(--muted); font-size: 11px; letter-spacing: 0.08em;
+    background: linear-gradient(transparent, var(--paper) 42%);
+  }
+  nav button {
+    font: inherit; letter-spacing: 0.06em; color: var(--soft);
+    background: transparent; border: 1px solid var(--line);
+    border-radius: 6px; padding: 7px 14px; cursor: pointer;
+  }
+  nav button:disabled { opacity: 0.35; cursor: default; }
+  :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+
+  /* --- units detail --- */
+  .formula-line { margin: 3vh 0 0; font-size: clamp(15px, 1.6vw, 19px); font-weight: 700; }
+  .formula-note { margin: 8px 0 0; color: var(--muted); font-size: clamp(12px, 1.1vw, 13px); max-width: 72ch; }
+  .units { display: grid; grid-template-columns: 1fr 1fr; gap: 3vw; margin-top: 4vh; }
+  .unitcol { border-top: 2px solid var(--line); padding-top: 12px; }
+  .unitcol.src { border-top-color: var(--green); }
+  .unitcol.unv { border-top-color: var(--amber); }
+  .unitcol .ul { font: 700 9px/1 var(--ui); letter-spacing: 0.15em; color: var(--muted); }
+  .unitcol.src .ul { color: var(--green); }
+  .unitcol.unv .ul { color: var(--amber); }
+  .unitcol .ub { margin-top: 10px; font-size: clamp(22px, 2.5vw, 33px); font-weight: 700; }
+  .unitcol p { margin: 10px 0 0; color: var(--soft); font-size: clamp(12px, 1.1vw, 13.5px); }
+  .callout.flat h2 { display: none; }
+
+  @media (max-width: 900px) {
+    body { overflow: auto; }
+    .slide { height: auto; min-height: 100%; padding: 36px 24px 76px; }
+    .title-grid, .split4, .cols3, .stops, .quad, .notes2, .formula { grid-template-columns: 1fr; }
+    .formula .op { padding: 0; }
+    .need { grid-template-columns: 1fr; gap: 8px; }
+    nav { padding: 10px 24px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="slide active">
+  <div class="title-grid">
+    <div>
+      <p class="kicker">Group 9 · SDG2410J · Carbon Accounting</p>
+      <h1>Li Ming’s personal carbon footprint</h1>
+      <p class="subline">One teaching semester</p>
+      <div class="rule"></div>
+      <p class="lede">What is counted, what is left out, and which numbers have a source.</p>
+    </div>
+    <div class="plate">
+      <div><b>783.7 kg</b><span>reported per teaching semester</span></div>
+      <div><b>96.1 kg</b><span>carries a published CO₂ factor</span></div>
+      <div><b>687.6 kg</b><span>no published source yet</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="kicker">Why · Lectures 1 and 2</p>
+  <h1>Two things he needs from the result</h1>
+  <div class="needs">
+    <div class="need">
+      <div class="label">NEED 01</div>
+      <div>
+        <h2>A semester, not only a total</h2>
+        <p>Lecture 1 set 3.84 and 2.54 t CO₂e per student per year side by side. They cannot be ranked until the unit and the boundary match.</p>
+        <p class="check">Sanity check: two 18-week semesters is about 1.6 t — below both.</p>
+      </div>
+    </div>
+    <div class="need">
+      <div class="label">NEED 02</div>
+      <div>
+        <h2>A comparison he is allowed to trust</h2>
+        <p>Electricity and high-speed rail have published CO₂ factors. Food, metro, and ride-hailing do not. A large unverified number must not outrank a sourced one.</p>
+      </div>
+    </div>
+  </div>
+  <p class="footline">Both needs point the same way: a sourced number and an unverified one never share a headline.</p>
+</section>
+
+<section class="slide">
+  <p class="kicker">What · Lectures 9 and 10</p>
+  <h1>The result is one stated service</h1>
+  <div class="formula">
+    <div class="fblock">
+      <div class="fl">ACTIVITY DATA</div>
+      <div class="fv">metro trips × km</div>
+      <div class="fs">kept in the profile’s own unit</div>
+    </div>
+    <div class="op">×</div>
+    <div class="fblock">
+      <div class="fl">EMISSION FACTOR</div>
+      <div class="fv">kg CO₂e per unit</div>
+      <div class="fs">matched to place, year, technology</div>
+    </div>
+    <div class="op">=</div>
+    <div class="fblock result">
+      <div class="fl">RESULT</div>
+      <div class="fv">one teaching semester</div>
+      <div class="fs">not a year, not a week</div>
+    </div>
+  </div>
+  <div class="notes2">
+    <p>A product result is reported per functional unit, not as the weight of what was consumed. The BMW vehicle study uses 200,000 km.</p>
+    <p>This profile never says how many semesters make a year, so nothing in the file is multiplied by 52.</p>
+  </div>
+  <p class="footline">Every counted row is converted onto that semester before anything is added.</p>
+</section>
+
+<section class="slide">
+  <p class="kicker">How · Lectures 3, 7, 8, 4 and 11</p>
+  <h1>A factor has to fit, and so does the question</h1>
+  <div class="split4">
+    <div>
+      <h2>Place, year, technology</h2>
+      <div class="spec">
+        <div class="sl">ELECTRICITY</div>
+        <div class="sv">0.5737 kg CO₂/kWh</div>
+        <div class="ss">Shanghai, 2023 · Announcement 2025 No. 47</div>
+      </div>
+      <div class="spec">
+        <div class="sl">RAIL</div>
+        <div class="sv">0.02709 kg CO₂/passenger·km</div>
+        <div class="ss">China, 2019 · operation phase</div>
+      </div>
+      <p class="small">The class sheet’s 0.4701 is Shanghai 2024 and is CO₂e. Both sources above report CO₂, so the page keeps CO₂.</p>
+    </div>
+    <div class="callout">
+      <h2>An account, not a forecast</h2>
+      <p>This assigns emissions to one student inside a stated boundary — that is attributional.</p>
+      <p>Replacing half the beef meals is not a consequential assessment: there is no baseline for what the food system would otherwise have done.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <p class="kicker">How the page answers him</p>
+  <h1>Three things he can actually use</h1>
+  <div class="cols3">
+    <div class="col">
+      <div class="num">01</div>
+      <h2>The profile stays filled in</h2>
+      <p>The shared facts are prefilled. Eighteen weeks is editable and labelled an assumption.</p>
+    </div>
+    <div class="col">
+      <div class="num">02</div>
+      <h2>The boundary stays visible</h2>
+      <p>Showers, parcels, clothing, and waste stay on the page and out of the total.</p>
+    </div>
+    <div class="col">
+      <div class="num">03</div>
+      <h2>The total names its units</h2>
+      <p>Sourced CO₂ and unverified CO₂e are listed apart, and meal advice says illustrative.</p>
+    </div>
+  </div>
+  <p class="footline">Five steps, one screen each. Reset returns the shared facts.</p>
+</section>
+
+<section class="slide">
+  <p class="kicker">Demonstration</p>
+  <h1>Three stops on the calculator</h1>
+  <p class="lede">Nothing is retyped. One number changes. Then the result is read, not only displayed.</p>
+  <div class="stops">
+    <div class="stop">
+      <div class="big">01</div>
+      <div class="st"><h2>Transport</h2></div>
+      <p>Metro is weekly trips times kilometres. Ride-hailing is monthly and travelled alone. Rail is already per semester, so the weeks do not touch it.</p>
+    </div>
+    <div class="stop">
+      <div class="big">02</div>
+      <div class="st"><h2>One change, on Energy</h2></div>
+      <p>Eighteen weeks is not a profile fact. Change it to 16: metro falls, rail stays at 880 km. Reset from the results page.</p>
+    </div>
+    <div class="stop">
+      <div class="big">03</div>
+      <div class="st"><h2>Read the result</h2></div>
+      <p>96.1 kg CO₂ with a source, 687.6 kg CO₂e without. Beef advice through the word illustrative, then the 20 percent electricity cut.</p>
+    </div>
+  </div>
+  <p class="footline">One live change is enough. The rest of the page is read, not clicked.</p>
+</section>
+
+<section class="slide">
+  <p class="kicker">So what · One revision</p>
+  <h1>The unit</h1>
+  <div class="quad">
+    <div>
+      <div class="ql issue">ISSUE</div>
+      <div class="qh">Prototype 1 called it kg CO₂e.</div>
+      <div class="qb">Electricity and rail are published as CO₂, so the two cannot be carried under one name.</div>
+    </div>
+    <div>
+      <div class="ql change">CHANGE</div>
+      <div class="qh">Now: kg reported per teaching semester.</div>
+      <div class="qb">Sourced CO₂ and unverified CO₂e are listed apart, and meal advice says illustrative.</div>
+    </div>
+    <div>
+      <div class="ql issue">EFFECT</div>
+      <div class="qh">324 kg is not a verified ranking.</div>
+      <div class="qb">He can see which advice is illustrative and which is arithmetic on a published factor.</div>
+    </div>
+    <div>
+      <div class="ql still">STILL OPEN</div>
+      <div class="qh">Food, metro, and ride-hailing.</div>
+      <div class="qb">No published source for any of the three. Disclosure is the current defense, not a fix.</div>
+    </div>
+  </div>
+  <p class="close">He can see which numbers have a source, and which numbers still cannot be used to rank.</p>
+</section>
+
+<section class="slide">
+  <p class="kicker">Detail · Units and gases</p>
+  <h1>One number, two units named</h1>
+  <p class="formula-line">CO₂e = Σ (gas × GWP100)</p>
+  <p class="formula-note">A CO₂e total weights each gas by its 100-year warming potential. CO₂ and CO₂e are different baskets, so this page names them apart.</p>
+  <div class="units">
+    <div class="unitcol src">
+      <div class="ul">SOURCED CO₂</div>
+      <div class="ub">96.1 kg</div>
+      <p>Electricity 72.3 kg · Shanghai 2023 · published as CO₂</p>
+      <p>High-speed rail 23.8 kg · China 2019 · published as CO₂</p>
+    </div>
+    <div class="unitcol unv">
+      <div class="ul">UNVERIFIED CO₂e</div>
+      <div class="ub">687.6 kg</div>
+      <p>Food 648.0 kg · per-kilogram factors, portions assumed</p>
+      <p>Metro 21.6 · ride-hailing 18.0 · walking 0.0 kg</p>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:3.2vh">
+    <p style="margin:0">Both sourced rows are published as CO₂ only. Adding the other combustion gases would raise them, so 96.1 kg sits on the low side of a CO₂e.</p>
+  </div>
+  <p class="close">So the headline says reported and names both parts. It is not a compliant CO₂e total.</p>
+</section>
+
+<nav>
+  <button type="button" id="prev">Previous</button>
+  <span id="count">1 / 8</span>
+  <button type="button" id="next">Next</button>
+</nav>
+
+<script>
+const slides = [...document.querySelectorAll(".slide")];
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
+const count = document.getElementById("count");
+let i = 0;
+function show(n) {
+  i = Math.max(0, Math.min(slides.length - 1, n));
+  slides.forEach((s, idx) => s.classList.toggle("active", idx === i));
+  prev.disabled = i === 0;
+  next.disabled = i === slides.length - 1;
+  count.textContent = (i + 1) + " / " + slides.length;
+}
+prev.addEventListener("click", () => show(i - 1));
+next.addEventListener("click", () => show(i + 1));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") { e.preventDefault(); show(i + 1); }
+  if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); show(i - 1); }
+  if (e.key === "Home") show(0);
+  if (e.key === "End") show(slides.length - 1);
+});
+show(0);
+</script>
+</body>
+</html>
