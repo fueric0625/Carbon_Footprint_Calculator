@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>Semester Footprint · 讲稿卡</title>
+<style>
+  @page { size: A4 portrait; margin: 14mm 15mm 12mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font: 16px/1.5 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+    color: #131a17;
+    background: #fbfbf8;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .card {
+    page-break-after: always;
+    break-after: page;
+    min-height: 262mm;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2mm;
+  }
+  .card:last-child { page-break-after: auto; break-after: auto; }
+
+  .head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid #e1e4dd; padding-bottom: 9px;
+  }
+  .time {
+    font: 700 11px/1 "Segoe UI", sans-serif;
+    letter-spacing: 0.15em; text-transform: uppercase; color: #1b6b4f;
+  }
+  .pg { font: 600 11px/1 "Segoe UI", sans-serif; color: #6e7a73; letter-spacing: 0.08em; }
+  .title {
+    margin: 16px 0 0;
+    font-size: 23px; font-weight: 600; line-height: 1.25; letter-spacing: 0.01em;
+  }
+  .sub { margin: 6px 0 0; color: #6e7a73; font-size: 13px; }
+
+  .blocks { margin-top: 20px; }
+  .cue {
+    margin: 0 0 13px; color: #6e7a73; font-size: 14.5px; font-style: italic;
+    line-height: 1.5;
+  }
+  .say {
+    margin: 0 0 18px; padding-left: 15px;
+    border-left: 3px solid #1b6b4f;
+    font-size: 23px; line-height: 1.5;
+  }
+  .say b { font-weight: 700; }
+  .say .amber { color: #a9642b; font-weight: 700; }
+
+  .foot {
+    margin-top: auto; padding-top: 10px;
+    border-top: 1px solid #e1e4dd;
+    display: flex; justify-content: space-between; align-items: baseline;
+    color: #6e7a73; font-size: 11px; letter-spacing: 0.04em;
+  }
+  .next { color: #1b6b4f; font-weight: 600; }
+
+  /* timeline + qa pages */
+  table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+  th, td { text-align: left; padding: 7px 8px 7px 0; border-bottom: 1px solid #eceee8; font-size: 13px; }
+  th { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #6e7a73; }
+  td.t { font-weight: 700; color: #1b6b4f; white-space: nowrap; }
+  td.s { color: #6e7a73; white-space: nowrap; }
+  .qa { margin: 0 0 14px; }
+  .qa .q { font-weight: 700; font-size: 14.5px; margin: 0 0 4px; }
+  .qa .a { margin: 0; font-size: 15px; line-height: 1.5; }
+  .qa .cn { color: #6e7a73; font-size: 12px; margin: 3px 0 0; }
+  .big3 { font-size: 17px; line-height: 1.5; }
+  .big3 p { margin: 0 0 16px; }
+  .label { font: 700 10px/1 "Segoe UI", sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: #1b6b4f; margin: 22px 0 8px; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin: 0 0 7px; font-size: 14px; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<!-- 1 · 时间轴 -->
+<section class="card">
+  <div class="head"><span class="time">Overview</span><span class="pg">1 / 17</span></div>
+  <h1 class="title">Semester Footprint · 7:30 讲稿</h1>
+  <p class="sub">805 词。按 130–140 词/分钟约 5:45–6:10，其余是点击、停顿、切页。上限 8:00。</p>
+  <table>
+    <tr><th>时间</th><th>画面</th><th>这一段只做一件事</th></tr>
+    <tr><td class="t">0:00</td><td class="s">第 1 页</td><td>报名字，说出那句主线</td></tr>
+    <tr><td class="t">0:20</td><td class="s">第 2 页</td><td>客户要什么，我们怎么回答</td></tr>
+    <tr><td class="t">1:05</td><td class="s">第 3 页</td><td>功能单位：一个学期</td></tr>
+    <tr><td class="t">1:30</td><td class="s">第 4 页</td><td>因子要匹配；这是归因不是后果</td></tr>
+    <tr><td class="t">1:55</td><td class="s">第 5–6 页</td><td>三个卖点 + 三站，切网页</td></tr>
+    <tr><td class="t">2:15</td><td class="s">网页 · Transport</td><td>指横幅，点三处，不改数字</td></tr>
+    <tr><td class="t">3:05</td><td class="s">网页 · Energy</td><td>只改一次：18 → 16，Reset</td></tr>
+    <tr><td class="t">4:05</td><td class="s">网页 · 结果</td><td>总数、两段单位、分类</td></tr>
+    <tr><td class="t">4:40</td><td class="s">网页 · 结果</td><td>两条建议 + 合理性校验</td></tr>
+    <tr><td class="t">5:35</td><td class="s">结果页下半</td><td>一句排除项</td></tr>
+    <tr><td class="t">5:55</td><td class="s">第 7 页</td><td>复查：问题→修改→效果→限制</td></tr>
+    <tr><td class="t">7:10</td><td class="s">第 7 / 9 页</td><td>收束句，指出处，停</td></tr>
+  </table>
+  <div class="foot"><span class="next">→ 翻页开始</span><span>Group 9</span></div>
+</section>
+
+<!-- 2 -->
+<section class="card">
+  <div class="head"><span class="time">0:00–0:20 · 第 1 页</span><span class="pg">2 / 17</span></div>
+  <h1 class="title">开场</h1>
+  <div class="blocks">
+    <p class="cue">站定，看一眼最后一排，再开口。</p>
+    <p class="say">Good morning. This is <b>Semester Footprint</b> — Li Ming's carbon footprint for <b>one teaching semester</b>. Li Ming is a fictional second-year student here.</p>
+    <p class="say">One question runs through it: what is counted, what is left out, and which numbers actually have a source.</p>
+    <p class="cue">停一秒再翻页。这句 "one question" 是全场主线。</p>
+  </div>
+  <div class="foot"><span class="next">→ 0:20 第 2 页 两个需求</span></div>
+</section>
+
+<!-- 3 -->
+<section class="card">
+  <div class="head"><span class="time">0:20–1:05 · 第 2 页</span><span class="pg">3 / 17</span></div>
+  <h1 class="title">两个需求</h1>
+  <div class="blocks">
+    <p class="cue">先指第一张卡，再指第二张；不要念卡片上的字。</p>
+    <p class="say">Lecture one put two student averages side by side: <b>3.84</b> and <b>2.54</b> tonnes per student per year. One counts on-campus operations. The other counts consumption-side spending. They are not comparable until the unit and the boundary match.</p>
+    <p class="say">So Li Ming needs two things. A semester result he can act on — and a comparison he is allowed to trust. Electricity and high-speed rail have published CO₂ factors. Food, metro and ride-hailing do not. Those two kinds of number stay apart.</p>
+    <p class="cue">"stay apart" 说完停半秒。这是产品设计的核心。</p>
+  </div>
+  <div class="foot"><span class="next">→ 1:05 第 3 页 功能单位</span></div>
+</section>
+
+<!-- 4 -->
+<section class="card">
+  <div class="head"><span class="time">1:05–1:30 · 第 3 页</span><span class="pg">4 / 17</span></div>
+  <h1 class="title">功能单位</h1>
+  <div class="blocks">
+    <p class="say">A product result is reported per functional unit, not as the weight of what was consumed. The BMW vehicle study uses <b>200,000 kilometres</b>. This profile never says how many semesters make a year, so nothing here is multiplied by 52.</p>
+    <p class="say">The unit is <b>one teaching semester</b>.</p>
+    <p class="cue">最后一句放慢。</p>
+  </div>
+  <div class="foot"><span class="next">→ 1:30 第 4 页 因子和归因</span></div>
+</section>
+
+<!-- 5 -->
+<section class="card">
+  <div class="head"><span class="time">1:30–1:55 · 第 4 页</span><span class="pg">5 / 17</span></div>
+  <h1 class="title">因子要匹配，问题也要匹配</h1>
+  <div class="blocks">
+    <p class="say">A factor has to match the place, the year and the technology. Electricity is Shanghai, 2023: <b>0.5737</b> kilograms CO₂ per kilowatt-hour. The class sheet's 0.4701 is Shanghai 2024, and it is CO₂e. Rail is China, 2019, operation phase: <b>0.02709</b>.</p>
+    <p class="say">And this is an attributional account. Replacing half the beef meals is not a consequential assessment — there is no baseline for what the food system would otherwise have done.</p>
+    <p class="cue">两个数只念一次，别回头解释。有人问再说。</p>
+  </div>
+  <div class="foot"><span class="next">→ 1:55 第 5–6 页，然后切网页</span></div>
+</section>
+
+<!-- 6 -->
+<section class="card">
+  <div class="head"><span class="time">1:55–2:15 · 第 5–6 页</span><span class="pg">6 / 17</span></div>
+  <h1 class="title">页面怎么回答他 · 三站路线</h1>
+  <div class="blocks">
+    <p class="cue">第 5 页点三栏；第 6 页只报三站，不要逐条念。</p>
+    <p class="say">Three things the page does. The shared facts stay filled in. The boundary stays visible. The total names its units.</p>
+    <p class="say">Three stops: transport, one change, then the result. I will not retype anything.</p>
+    <p class="cue">切到浏览器。留三秒让画面出来，别急着说话。</p>
+  </div>
+  <div class="foot"><span class="next">→ 2:15 网页 · Transport</span></div>
+</section>
+
+<!-- 7 -->
+<section class="card">
+  <div class="head"><span class="time">2:15–3:05 · 计算器</span><span class="pg">7 / 17</span></div>
+  <h1 class="title">Transport · 用默认值</h1>
+  <div class="blocks">
+    <p class="cue">先指横幅，停一拍。</p>
+    <p class="say">This banner is the rule for the whole page. Electricity and rail have <b>published</b> factors. Everything else is unverified.</p>
+    <p class="cue">指地铁 → 网约车 → 高铁，各一句，手不要停在一个地方。</p>
+    <p class="say">Metro is weekly trips times one-way kilometres. Ride-hailing is monthly, he travels alone, and it is not divided by passengers. Rail is two round trips of <b>220 kilometres</b> — already per semester, so the weeks do not touch it.</p>
+    <p class="say">Walking stays in, with use-phase emissions at zero. That is a boundary choice, not an unverified factor.</p>
+  </div>
+  <div class="foot"><span class="next">→ 3:05 点 Energy</span></div>
+</section>
+
+<!-- 8 -->
+<section class="card">
+  <div class="head"><span class="time">3:05–4:05 · 计算器</span><span class="pg">8 / 17</span></div>
+  <h1 class="title">Energy · 只改一次</h1>
+  <div class="blocks">
+    <p class="cue">点 Energy。</p>
+    <p class="say"><b>Eighteen weeks</b> is not a fact from the profile. It is an assumption he can change.</p>
+    <p class="say"><b>One hundred and twenty</b> kilowatt-hours is the whole room for the last thirty days. Li Ming is one quarter of four people, so his share is <b>126</b> kilowatt-hours. Showers have a count and a duration, but no energy type and no amount, so they stay out of the total.</p>
+    <p class="say">I will change one number. Eighteen becomes sixteen.</p>
+    <p class="cue">改数字 → 点 View results，停一拍再念。</p>
+    <p class="say">The total is now <b>699.3</b> kilograms. Metro falls to <b>480</b> kilometres. Beef falls from 54 meals to 48. Rail is still <b>880</b>, because it was already per semester.</p>
+    <p class="cue">按结果页顶部的 Reset。</p>
+    <p class="say">Reset returns both the weeks and the total.</p>
+  </div>
+  <div class="foot"><span class="next">→ 4:05 读结果</span></div>
+</section>
+
+<!-- 9 -->
+<section class="card">
+  <div class="head"><span class="time">4:05–4:40 · 结果页</span><span class="pg">9 / 17</span></div>
+  <h1 class="title">读总数和两段单位</h1>
+  <div class="blocks">
+    <p class="cue">指标题的数字。</p>
+    <p class="say"><b>783.7 kilograms reported</b>, per teaching semester. This is <span class="amber">not a complete CO₂e total</span>, and the page says so.</p>
+    <p class="cue">指下面两栏。</p>
+    <p class="say">Sourced CO₂ is <b>96.1</b> kilograms: electricity 72.3, rail 23.8. Unverified CO₂e is <b>687.6</b>. By category: food <b>648</b>, electricity 72, transport 63.</p>
+  </div>
+  <div class="foot"><span class="next">→ 4:40 滚到建议</span></div>
+</section>
+
+<!-- 10 -->
+<section class="card">
+  <div class="head"><span class="time">4:40–5:35 · 结果页</span><span class="pg">10 / 17</span></div>
+  <h1 class="title">两条建议 + 合理性校验</h1>
+  <div class="blocks">
+    <p class="cue">滚到建议。只读两条，第三条跳过。</p>
+    <p class="say">Two suggestions. Beef: 54 meals at <b>100 grams</b>, times a provisional <b>60 kilograms</b> per kilogram of food. Halving them saves about <b>159</b>, and the total falls to about <b>624</b>. The portion is mine and the factor is unverified — so that comparison is <span class="amber">illustrative</span>.</p>
+    <p class="say">Electricity is different. The factor has a source, so the <b>14.5</b> kilograms is arithmetic on a published number. The <b>20 percent</b> is still a scenario, but it does not rest on an unverified factor.</p>
+    <p class="cue">停一下再讲合理性。这是全场最容易被记住的一句。</p>
+    <p class="say">One check on plausibility. Two semesters is about <b>1.6 tonnes</b>. Our food alone is <b>1.3 tonnes</b> — against <b>1.24</b> in the Tongji study of 2015, over about the same nine months. We sit lower because showers, study, goods and waste are outside this boundary.</p>
+  </div>
+  <div class="foot"><span class="next">→ 5:35 Not included</span></div>
+</section>
+
+<!-- 11 -->
+<section class="card">
+  <div class="head"><span class="time">5:35–5:55 · 结果页下半</span><span class="pg">11 / 17</span></div>
+  <h1 class="title">排除项，一句</h1>
+  <div class="blocks">
+    <p class="cue">滚到 Not included，指一下就走。</p>
+    <p class="say">Showers, parcels, clothing and waste are on the page and <b>out of the total</b>. The profile gives a count, not an energy type, a mass, or a treatment path.</p>
+    <p class="say">Two takeaway meals a week are already inside the 21 main meals, so they are not added again.</p>
+  </div>
+  <div class="foot"><span class="next">→ 5:55 切回第 7 页</span></div>
+</section>
+
+<!-- 12 -->
+<section class="card">
+  <div class="head"><span class="time">5:55–6:35 · 第 7 页</span><span class="pg">12 / 17</span></div>
+  <h1 class="title">复查 · 问题、修改、效果</h1>
+  <div class="blocks">
+    <p class="cue">切回第 7 页。这是唯一一次讲"过去发生了什么"，语速可以慢下来。</p>
+    <p class="say">One revision. Prototype 1 called the headline <b>kilograms CO₂e</b>. Carbon, CO₂ and CO₂e cannot be mixed — and both of my published factors are CO₂.</p>
+    <p class="say">The decision: keep one reported total, and name both parts. Sourced CO₂ on one line, unverified CO₂e on the other. Any advice resting on an unverified factor says illustrative.</p>
+    <p class="say">The effect: <b>324 kilograms</b> can no longer pass as a ranking.</p>
+  </div>
+  <div class="foot"><span class="next">→ 6:35 还留着什么</span></div>
+</section>
+
+<!-- 13 -->
+<section class="card">
+  <div class="head"><span class="time">6:35–7:10 · 第 7 页</span><span class="pg">13 / 17</span></div>
+  <h1 class="title">还留着什么 · 学到了什么</h1>
+  <div class="blocks">
+    <p class="say">What is still open: food, metro and ride-hailing have <b>no published source</b>. In the factor table that is <b>six rows</b>, because food splits into four meal types. That is disclosure, not a fix.</p>
+    <p class="cue">加这句"学到了什么"。评分表的反思栏要的正是它。</p>
+    <p class="say">The lesson is not that the number was wrong. It is that <b>a number without a stated unit and a stated source cannot be ranked against anything</b>.</p>
+  </div>
+  <div class="foot"><span class="next">→ 7:10 收束</span></div>
+</section>
+
+<!-- 14 -->
+<section class="card">
+  <div class="head"><span class="time">7:10–7:30 · 收束</span><span class="pg">14 / 17</span></div>
+  <h1 class="title">最后两句，然后停</h1>
+  <div class="blocks">
+    <p class="cue">指第 7 页最后一行，或直接指屏幕上的结论句。</p>
+    <p class="say">He can see, in one semester, which numbers have a source, and which numbers still cannot be used to rank.</p>
+    <p class="cue">停两秒。如果还剩时间，翻到第 9 页。</p>
+    <p class="say">The sources are on the last page.</p>
+    <p class="cue">不要再补话。不要加 "that's all, thank you" 以外的东西。</p>
+  </div>
+  <div class="foot"><span class="next">→ 问答</span></div>
+</section>
+
+<!-- 15 -->
+<section class="card">
+  <div class="head"><span class="time">应急 · 卡壳与砍法</span><span class="pg">15 / 17</span></div>
+  <h1 class="title">万一</h1>
+  <p class="label">三句救场话</p>
+  <div class="big3">
+    <p>① 被问到没想到的：<br>"That is outside this boundary — and the page lists it under Not included."</p>
+    <p>② 被质疑数字：<br>"That number is provisional, and the page marks it unverified. I would not rank with it."</p>
+    <p>③ 完全不会：<br>"I do not have that verified. The honest answer is that we chose this and here is the trade-off."</p>
+  </div>
+  <p class="label">落后了，按这个顺序砍</p>
+  <ul>
+    <li>第 8 页（单位细节）整页跳过。</li>
+    <li>5:35 那句压成：<i>Showers, parcels, clothing and waste stay out — no energy type, no mass, no pathway.</i></li>
+    <li>4:40 的电力建议只念第一句。</li>
+    <li>第 3 页只念最后一句：<i>The unit is one teaching semester.</i></li>
+  </ul>
+  <p class="label">提前了，按这个顺序加</p>
+  <ul>
+    <li>第 8 页讲 35 秒：两个来源都是 CO₂，补上其他气体只会更高，所以 96.1 偏在低的一侧。</li>
+    <li>补一句：<i>A comparison is only as good as its weakest factor.</i></li>
+    <li>讲朱文：知道不等于做到，所以建议要落到默认选项和设施，不是宣传。</li>
+  </ul>
+  <div class="foot"><span class="next">→ 问答</span></div>
+</section>
+
+<!-- 16 -->
+<section class="card">
+  <div class="head"><span class="time">问答 · 一</span><span class="pg">16 / 17</span></div>
+  <h1 class="title">被问到再答</h1>
+  <div class="qa">
+    <p class="q">Why 0.5737 and not the class sheet's 0.4701?</p>
+    <p class="a">The class sheet uses Shanghai 2024 and it is CO₂e. Mine is the 2023 Shanghai provincial average from the 2025 No. 47 announcement, and that source reports CO₂.</p>
+    <p class="cn">年份和单位都不同，我们引一手公告。</p>
+  </div>
+  <div class="qa">
+    <p class="q">Why not multiply by 52?</p>
+    <p class="a">The profile mixes weeks, months, 30 days and semesters, and never says how many semesters make a year. One month is four weeks.</p>
+  </div>
+  <div class="qa">
+    <p class="q">Why is food so large?</p>
+    <p class="a">54 beef meals, at an assumed 100 grams each, times a provisional 60 kilograms per kilogram. The portion is ours; the factor has no source. That ranking is illustrative.</p>
+  </div>
+  <div class="qa">
+    <p class="q">Why is your figure below 2.54 and 3.84?</p>
+    <p class="a">Two semesters is about 1.6 tonnes. Our food alone is 1.3 tonnes, against 1.24 in the Tongji study. We are lower because showers, study, goods and waste are outside the boundary.</p>
+  </div>
+  <div class="qa">
+    <p class="q">Which paper is your boundary closer to?</p>
+    <p class="a">Zhu's on food, because our factors are per kilogram of food. Li's on electricity, because we count only the room meter. We sit between them, and lower.</p>
+  </div>
+  <div class="qa">
+    <p class="q">Why is your food share higher than both papers?</p>
+    <p class="a">Because the denominator is narrower. Their 34 and 47 per cent differ from each other for exactly the same reason.</p>
+  </div>
+  <div class="foot"><span class="next">→ 还有一页</span></div>
+</section>
+
+<!-- 17 -->
+<section class="card">
+  <div class="head"><span class="time">问答 · 二</span><span class="pg">17 / 17</span></div>
+  <h1 class="title">被问到再答（续）</h1>
+  <div class="qa">
+    <p class="q">Are the sourced rows CO₂ or CO₂e?</p>
+    <p class="a">CO₂. Adding the other combustion gases would raise them, so 96.1 sits on the low side.</p>
+    <p class="cn">偏低的一侧，不是偏高。</p>
+  </div>
+  <div class="qa">
+    <p class="q">Why leave out showers and waste?</p>
+    <p class="a">The profile gives counts, not energy, mass, or a treatment pathway. Li et al. put showers at 0.65 tonnes a year — 18 per cent of their total — so the gap is material, not cosmetic.</p>
+  </div>
+  <div class="qa">
+    <p class="q">Is 120 kWh Li Ming's own use?</p>
+    <p class="a">No. It is the whole room over 30 days. He is one quarter of four, scaled to the semester.</p>
+  </div>
+  <div class="qa">
+    <p class="q">Is a battery car always lower?</p>
+    <p class="a">Only if asked. iX5 production is 18.1 tonnes against 11.7 for the diesel X5; over 200,000 kilometres on the European mix, 31.1 against 58.3. It is not an input to this calculator.</p>
+  </div>
+  <div class="qa">
+    <p class="q">What is the biggest limitation?</p>
+    <p class="a">The food factors. They carry 83 per cent of the total and none of them has a published source, so every ranking built on them is illustrative.</p>
+  </div>
+  <div class="foot"><span class="next">→ 结束</span></div>
+</section>
+
+</body>
+</html>
