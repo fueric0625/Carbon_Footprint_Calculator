@@ -332,7 +332,8 @@ def build_ai(path):
 
     grid(d, [[[("Group No.: ", True), ("9", False)],
               [("Version Before Revision: ", True), ("Prototype 1", False)],
-              [("AI Tool(s): ", True), ("Cursor (Grok); AI coding agent for Revision 3", False)],
+              [("AI Tool(s): ", True),
+               ("Cursor (Grok) for Revisions 1–2; DeepSeek Harness, AI coding agent, for Revision 3", False)],
               [("Date: ", True), ("2026-11-09, 2026-11-10", False)]]],
          widths=[3.6, 5.2, 5.6, 4.2], label_col=False)
 
